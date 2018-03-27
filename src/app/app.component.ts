@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '@njfiorello/weather-gauges';
-  temperature = 75;
+  farenheit = 75;
+  celsius = 20;
 }

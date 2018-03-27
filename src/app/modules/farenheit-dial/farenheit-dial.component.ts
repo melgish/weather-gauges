@@ -3,7 +3,7 @@ import { Component, OnChanges, Input, SimpleChange} from '@angular/core';
 @Component({
   selector: 'wg-farenheit-dial',
   templateUrl: './farenheit-dial.component.html',
-  styleUrls: ['./farenheit-dial.component.scss']
+  // styleUrls: ['./farenheit-dial.component.scss']
 })
 export class FarenheitDialComponent implements OnChanges {
   @Input() temperature : number = 60;

@@ -116,6 +116,7 @@
         <text y="-35" transform="rotate(-112.5 0 -35)">150</text>
       </g>
     </g>
+
     <!-- lcd display -->
     <g transform="translate(0 10)">
       <text>Temperature</text>
@@ -123,16 +124,17 @@
       <text y="12" font-size="9">{{temperature|number:'.1'}} &deg;F</text>
     </g>
 
-
     <!-- needle -->
-    <g fill="#e00" filter="url(#farenheit-dial-drop-shadow)" data-bind-attr.transform="rotate">
-      <circle r="4" fill="red"></circle>
-      <path d="M-3 0 L-.75 -40 L.25 -40 L3 0"></path>
-      <circle r="0.75" fill="black"></circle>
+    <g fill="#e00" filter="url(#farenheit-dial-drop-shadow)">
+      <g data-bind-attr.transform="rotate">
+        <circle r="4"></circle>
+        <path d="M-3 0 L-.4 -40 L.4 -40 L3 0"></path>
+        <circle r="0.75" fill="black"></circle>
+      </g>
     </g>
 
     <!-- crystal -->
-    <circle r="53" cx="10" cy="10" fill="none" stroke="white" stroke-width="4" opacity=".5"
-      filter="url(#farenheit-dial-glass-blur)" clip-path="url(#farenheit-dial-glass-clip)"></circle>
+    <circle r="53" cx="10" cy="10" fill="none" stroke="white" stroke-width="4" opacity=".5" filter="url(#farenheit-dial-glass-blur)"
+      clip-path="url(#farenheit-dial-glass-clip)"></circle>
   </g>
 </svg>

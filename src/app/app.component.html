@@ -1,8 +1,12 @@
 <h1>{{title}}</h1>
 <hr/>
 <div class="dial">
-  <wg-farenheit-dial [temperature]="temperature"></wg-farenheit-dial>
-  <input type="range" min="-30" max="150" [(ngModel)]="temperature">
+  <wg-farenheit-dial [temperature]="farenheit"></wg-farenheit-dial>
+  <input type="range" min="-30" max="150" [(ngModel)]="farenheit">
+</div>
+<div class="dial">
+  <wg-celsius-dial [temperature]="celsius"></wg-celsius-dial>
+  <input type="range" min="-30" max="70" [(ngModel)]="celsius">
 </div>
 
 
