@@ -1,0 +1,17 @@
+{
+  "name": "@njfiorello/weather-gauges",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "some svg gauges powered by Angular",
+  "peerDependencies": {
+    "@angular/core": "^5.2.0",
+    "@angular/common": "^5.2.0"
+  },
+  "ngPackage": {
+    "dest": "../../../dist",
+    "lib": {
+      "entryFile": "./public_api.ts",
+      "licensePath": "../../LICENSE"
+    }
+  }
+}
