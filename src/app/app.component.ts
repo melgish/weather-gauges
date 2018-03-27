@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'wg';
+  title = '@njf/weather-gauges';
+  temperature = 75;
 }
