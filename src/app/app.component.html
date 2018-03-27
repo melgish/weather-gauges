@@ -2,6 +2,7 @@
 <hr/>
 <div class="dial">
   <wg-farenheit-dial [temperature]="temperature"></wg-farenheit-dial>
+  <input type="range" min="-30" max="150" [(ngModel)]="temperature">
 </div>
-<input type="range" min="-30" max="150" [(ngModel)]="temperature">
-<p>{{ temperature }}</p>
+
+

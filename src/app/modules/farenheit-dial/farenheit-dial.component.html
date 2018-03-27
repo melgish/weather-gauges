@@ -27,14 +27,12 @@
       <feComposite in2="firstFilter" operator="over"></feComposite>
     </filter>
 
-
     <filter id="farenheit-dial-glass-blur">
       <feGaussianBlur stdDeviation="1.75"></feGaussianBlur>
     </filter>
     <clipPath id="farenheit-dial-glass-clip">
       <circle r="43"></circle>
     </clipPath>
-
 
     <g id="farenheit-dial-ticks">
       <line y1="-44" y2="-40" stroke-width=".8" stroke="black"></line>
@@ -47,8 +45,10 @@
   <g transform="translate(50 50)" font-family="tahoma" dominant-baseline="middle" text-anchor="middle" font-size="6">
     <!-- housing -->
     <circle r="48" fill="url(#farenheit-dial-metalic)" filter="url(#farenheit-dial-drop-shadow)"></circle>
+
     <!-- face -->
-    <circle r="44" fill="white" fill-opacity="0.5" stroke="black" stroke-width="0.2" stroke-opacity="0.5" filter="url(#farenheit-dial-inner-shadow)"></circle>
+    <circle r="44" fill="#ffe" fill-opacity="0.6" stroke="black" stroke-width="0.2" stroke-opacity="0.5" filter="url(#farenheit-dial-inner-shadow)"></circle>
+
     <!-- ticks -->
     <g>
       <g transform="rotate(-112.5)">
@@ -119,8 +119,8 @@
     <!-- lcd display -->
     <g transform="translate(0 10)">
       <text>Temperature</text>
-      <rect y="3" x="-20" width="40" height="14" rx="3" ry="3" fill="#def" filter="url(#farenheit-dial-inner-shadow)"></rect>
-      <text y="11" font-size="9">{{temperature|number:'.1'}} &deg;F</text>
+      <rect y="4" x="-20" width="40" height="14" rx="3" ry="3" fill="#def" filter="url(#farenheit-dial-inner-shadow)"></rect>
+      <text y="12" font-size="9">{{temperature|number:'.1'}} &deg;F</text>
     </g>
 
 
@@ -130,8 +130,9 @@
       <path d="M-3 0 L-.75 -40 L.25 -40 L3 0"></path>
       <circle r="0.75" fill="black"></circle>
     </g>
+
     <!-- crystal -->
-    <circle r="53" cx="10" cy="10" fill="none" stroke="white" stroke-width="4"
+    <circle r="53" cx="10" cy="10" fill="none" stroke="white" stroke-width="4" opacity=".5"
       filter="url(#farenheit-dial-glass-blur)" clip-path="url(#farenheit-dial-glass-clip)"></circle>
   </g>
 </svg>
