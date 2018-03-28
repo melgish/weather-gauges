@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { CelsiusDialModule } from './modules/celsius-dial/celsius-dial.module';
 import { FarenheitDialModule } from './modules/public_api';
 import { FormsModule } from '@angular/forms';
+import { HumidityDialModule } from './modules/humidity-dial/humidity-dial.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -14,6 +15,7 @@ describe('AppComponent', () => {
         FormsModule,
         CelsiusDialModule,
         FarenheitDialModule,
+        HumidityDialModule,
       ]
     }).compileComponents();
   }));

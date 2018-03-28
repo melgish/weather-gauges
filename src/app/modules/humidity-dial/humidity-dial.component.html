@@ -1,18 +1,18 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="celsius-dial-metalic" x1="0" y1="1" x2="1" y2="0">
+    <linearGradient id="humidity-dial-metalic" x1="0" y1="1" x2="1" y2="0">
       <stop offset="0%" stop-color="#888"></stop>
       <stop offset="50%" stop-color="#def"></stop>
       <stop offset="100%" stop-color="#888"></stop>
     </linearGradient>
 
-    <filter id="celsius-dial-drop-shadow" width="1.5" height="1.5">
+    <filter id="humidity-dial-drop-shadow" width="1.5" height="1.5">
       <feOffset in="SourceAlpha" result="offOut" dx="1" dy="1"></feOffset>
       <feGaussianBlur in="offOut" result="blurOut" stdDeviation="1"></feGaussianBlur>
       <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
     </filter>
 
-    <filter id="celsius-dial-inner-shadow" x0="-0.5" y0="-0.5" width="1.25" height="1.25">
+    <filter id="humidity-dial-inner-shadow" x0="-0.5" y0="-0.5" width="1.25" height="1.25">
       <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"></feGaussianBlur>
       <feOffset dx="3" dy="2"></feOffset>
       <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
@@ -27,14 +27,14 @@
       <feComposite in2="firstFilter" operator="over"></feComposite>
     </filter>
 
-    <filter id="celsius-dial-glass-blur">
+    <filter id="humidity-dial-glass-blur">
       <feGaussianBlur stdDeviation="1.75"></feGaussianBlur>
     </filter>
-    <clipPath id="celsius-dial-glass-clip">
+    <clipPath id="humidity-dial-glass-clip">
       <circle r="43"></circle>
     </clipPath>
 
-    <g id="celsius-dial-ticks">
+    <g id="humidity-dial-ticks">
       <line y1="-44" y2="-39" stroke-width=".8" stroke="black"></line>
       <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(2)"></line>
       <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(4)"></line>
@@ -49,68 +49,68 @@
   </defs>
   <g transform="translate(50 50)" font-family="tahoma" dominant-baseline="middle" text-anchor="middle" font-size="6">
     <!-- housing -->
-    <circle r="48" fill="url(#celsius-dial-metalic)" filter="url(#celsius-dial-drop-shadow)"></circle>
+    <circle r="48" fill="url(#humidity-dial-metalic)" filter="url(#humidity-dial-drop-shadow)"></circle>
 
     <!-- face -->
-    <circle r="44" fill="#ffe" fill-opacity="0.6" stroke="black" stroke-width="0.2" stroke-opacity="0.5" filter="url(#celsius-dial-inner-shadow)"></circle>
+    <circle r="44" fill="#ffe" fill-opacity="0.6" stroke="black" stroke-width="0.2" stroke-opacity="0.5" filter="url(#humidity-dial-inner-shadow)"></circle>
 
     <!-- ticks -->
     <g>
       <g transform="rotate(-100)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(100 0 -34)">-30</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-35" transform="rotate(100 0 -35)">0</text>
       </g>
       <g transform="rotate(-80)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(80 0 -34)">-20</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(80 0 -34)">10</text>
       </g>
       <g transform="rotate(-60)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(60 0 -34)">-10</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(60 0 -34)">20</text>
       </g>
       <g transform="rotate(-40)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-35" transform="rotate(40 0 -35)">0</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(40 0 -34)">30</text>
       </g>
       <g transform="rotate(-20)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(20 0 -34)">10</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(20 0 -34)">40</text>
       </g>
       <g transform="rotate(0)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(0 0 -34)">20</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(0 0 -34)">50</text>
       </g>
       <g transform="rotate(20)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(-20 0 -34)">30</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(-20 0 -34)">60</text>
       </g>
       <g transform="rotate(40)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(-40 0 -34)">40</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(-40 0 -34)">70</text>
       </g>
       <g transform="rotate(60)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(-60 0 -34)">50</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(-60 0 -34)">80</text>
       </g>
       <g transform="rotate(80)">
-        <use href="#celsius-dial-ticks"></use>
-        <text y="-34" transform="rotate(-80 0 -34)">60</text>
+        <use href="#humidity-dial-ticks"></use>
+        <text y="-34" transform="rotate(-80 0 -34)">90</text>
       </g>
       <g transform="rotate(100)">
         <line y1="-44" y2="-40" stroke-width=".8" stroke="black"></line>
-        <text y="-34" transform="rotate(-100 0 -34)">70</text>
+        <text y="-34" transform="rotate(-100 0 -34)">100</text>
       </g>
     </g>
 
     <!-- lcd display -->
     <g transform="translate(0 14)">
-      <text>Temperature</text>
-      <rect y="4" x="-20" width="40" height="14" rx="3" ry="3" fill="#def" filter="url(#celsius-dial-inner-shadow)"></rect>
-      <text class="lcd" y="12" font-size="9">{{temperature|number:'.1'}} &deg;C</text>
+      <text>Relative Humidity</text>
+      <rect y="4" x="-20" width="40" height="14" rx="3" ry="3" fill="#def" filter="url(#humidity-dial-inner-shadow)"></rect>
+      <text class="lcd" y="12" font-size="9">{{humidity|number:'.1'}} %</text>
     </g>
 
     <!-- needle -->
-    <g fill="#e00" filter="url(#celsius-dial-drop-shadow)">
+    <g fill="#e00" filter="url(#humidity-dial-drop-shadow)">
       <g class="needle" data-bind-attr.transform="rotate">
         <circle r="4"></circle>
         <path d="M-3 0 L-.4 -40 L.4 -40 L3 0"></path>
@@ -119,7 +119,7 @@
     </g>
 
     <!-- crystal -->
-    <circle r="53" cx="10" cy="10" fill="none" stroke="white" stroke-width="4" opacity=".5" filter="url(#celsius-dial-glass-blur)"
-      clip-path="url(#celsius-dial-glass-clip)"></circle>
+    <circle r="53" cx="10" cy="10" fill="none" stroke="white" stroke-width="4" opacity=".5" filter="url(#humidity-dial-glass-blur)"
+      clip-path="url(#humidity-dial-glass-clip)"></circle>
   </g>
 </svg>

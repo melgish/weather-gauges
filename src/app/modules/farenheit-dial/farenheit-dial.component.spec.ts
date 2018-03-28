@@ -39,8 +39,8 @@ describe('FarenheitDialComponent', () => {
     component.ngOnChanges({ temperature: new SimpleChange(60, 75, false) });
     fixture.detectChanges();
 
-    expect(component.rotate).toBe('rotate(18.75)');
-    expect(needle.attributes['transform']).toBe('rotate(18.75)');
+    expect(component.rotate).toBe('rotate(21)');
+    expect(needle.attributes['transform']).toBe('rotate(21)');
     expect(lcd.nativeElement.textContent).toMatch(/75.*F/);
 
     component.temperature = 60;

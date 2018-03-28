@@ -11,8 +11,15 @@ export class CelsiusDialComponent implements OnChanges {
 
   ngOnChanges(changes: { [propkey: string]: SimpleChange }) {
     if (changes['temperature']) {
-      const t = changes['temperature'].currentValue;
-      this.rotate = `rotate(${((t - 20) * 2.25) || 0})`;
+      // temperature: [-30, 70]
+      //   range = abs(-30 - 70) = 100;
+      //   center = (range / 2) + min = 20;
+      // arc: [-100, 100]
+      //   range = abs(-100 - 100) = 200;
+      // factor: arc.range / temperature.range = 2;
+      // rotation = (t - center) * factor;
+      const c = changes['temperature'].currentValue;
+      this.rotate = `rotate(${((c - 20) * 2) || 0})`;
     }
   }
 }

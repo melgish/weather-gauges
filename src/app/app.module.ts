@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FarenheitDialModule } from './modules/farenheit-dial/farenheit-dial.module';
 import { CelsiusDialModule } from './modules/celsius-dial/celsius-dial.module';
+import { HumidityDialModule } from './modules/humidity-dial/humidity-dial.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,9 @@ import { CelsiusDialModule } from './modules/celsius-dial/celsius-dial.module';
   imports: [
     BrowserModule,
     FormsModule,
-    FarenheitDialModule,
     CelsiusDialModule,
+    FarenheitDialModule,
+    HumidityDialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

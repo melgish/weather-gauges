@@ -8,5 +8,7 @@
   <wg-celsius-dial [temperature]="celsius"></wg-celsius-dial>
   <input type="range" min="-30" max="70" [(ngModel)]="celsius">
 </div>
-
-
+<div class="dial">
+  <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
+  <input type="range" min="0" max="100" [(ngModel)]="humidity">
+</div>

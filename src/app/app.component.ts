@@ -9,4 +9,5 @@ export class AppComponent {
   title = '@njfiorello/weather-gauges';
   farenheit = 75;
   celsius = 20;
+  humidity = 63.5;
 }

@@ -39,8 +39,8 @@ describe('CelsiusDialComponent', () => {
     component.ngOnChanges({ temperature: new SimpleChange(20, 37, false) });
     fixture.detectChanges();
 
-    expect(component.rotate).toBe('rotate(38.25)');
-    expect(needle.attributes['transform']).toBe('rotate(38.25)');
+    expect(component.rotate).toBe('rotate(34)');
+    expect(needle.attributes['transform']).toBe('rotate(34)');
     expect(lcd.nativeElement.textContent).toMatch(/37.*C/);
 
     component.temperature = 20;
@@ -59,12 +59,5 @@ describe('CelsiusDialComponent', () => {
     component.ngOnChanges({ somethingElse: new SimpleChange(37, 20, false) });
     fixture.detectChanges();
     expect(component.rotate).toBe('rotate(0)');
-  });
-
-  it('should update rotation only when temperature changes', () => {
-    component.ngOnChanges({ else: new SimpleChange(false, true, false) });
-    expect(component.rotate).toBe('rotate(0)');
-    component.ngOnChanges({ temperature: new SimpleChange(20, 37, false) });
-    expect(component.rotate).toBe('rotate(38.25)');
   });
 });

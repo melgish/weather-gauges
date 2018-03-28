@@ -11,8 +11,15 @@ export class FarenheitDialComponent implements OnChanges {
 
   ngOnChanges(changes: { [propkey: string]: SimpleChange }) {
     if (changes['temperature']) {
+      // temperature: [-30, 150]
+      //   range = abs(-30 - 150) = 180;
+      //   center = range / 2 + min = 60;
+      // arc: [-126, 126]
+      //   range = abs(-126 - 126) = 252;
+      // factor: arc.range / temperature.range = 1.4;
+      // rotation = (t - center) * factor;
       const t = changes['temperature'].currentValue;
-      this.rotate = `rotate(${(t * 1.25 - 75.0) || 0})`;
+      this.rotate = `rotate(${((t - 60) * 1.4) || 0})`;
     }
   }
 }
