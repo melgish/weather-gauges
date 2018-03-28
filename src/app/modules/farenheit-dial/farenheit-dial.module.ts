@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FarenheitDialComponent } from './farenheit-dial.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   declarations: [FarenheitDialComponent],
-  exports: [
-    FarenheitDialComponent
-  ]
+  exports: [FarenheitDialComponent]
 })
 export class FarenheitDialModule { }

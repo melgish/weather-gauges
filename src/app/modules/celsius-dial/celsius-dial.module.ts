@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CelsiusDialComponent } from './celsius-dial.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   declarations: [CelsiusDialComponent],
-  exports: [
-    CelsiusDialComponent,
-  ]
+  exports: [CelsiusDialComponent]
 })
 export class CelsiusDialModule { }
