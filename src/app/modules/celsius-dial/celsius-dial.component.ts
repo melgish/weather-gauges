@@ -6,10 +6,10 @@ import { Component, OnChanges, Input, SimpleChange } from '@angular/core';
   // styleUrls: ['./celsius-dial.component.scss']
 })
 export class CelsiusDialComponent implements OnChanges {
-  @Input() temperature : number = 20;
-  rotate: string = 'rotate(0)';
+  @Input() temperature = 20;
+  rotate = 'rotate(0)';
 
-  ngOnChanges(changes: {[propkey: string]: SimpleChange}) {
+  ngOnChanges(changes: { [propkey: string]: SimpleChange }) {
     if (changes['temperature']) {
       const t = changes['temperature'].currentValue;
       this.rotate = `rotate(${((t - 20) * 2.25) || 0})`;
