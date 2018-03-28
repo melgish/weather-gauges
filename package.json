@@ -53,8 +53,5 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/melgish/weather-gauges.git"
-  },
-  "publishConfig": {
-
   }
 }
