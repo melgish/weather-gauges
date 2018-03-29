@@ -10,4 +10,7 @@ export class AppComponent {
   farenheit = 75;
   celsius = 20;
   humidity = 63.5;
+  direction = 45;
+  speed = 12.5;
+  units = 'MPH';
 }

@@ -1,9 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CelsiusDialModule } from './modules/celsius-dial/celsius-dial.module';
-import { FarenheitDialModule } from './modules/public_api';
+import { FarenheitDialModule, WindDialModule, HumidityDialModule, CelsiusDialModule } from './modules/public_api';
 import { FormsModule } from '@angular/forms';
-import { HumidityDialModule } from './modules/humidity-dial/humidity-dial.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -16,6 +14,7 @@ describe('AppComponent', () => {
         CelsiusDialModule,
         FarenheitDialModule,
         HumidityDialModule,
+        WindDialModule,
       ]
     }).compileComponents();
   }));

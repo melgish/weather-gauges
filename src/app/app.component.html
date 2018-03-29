@@ -12,3 +12,8 @@
   <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
   <input type="range" min="0" max="100" [(ngModel)]="humidity">
 </div>
+<div class="dial">
+  <wg-wind-dial [direction]="direction" [speed]="speed" [units]="units"></wg-wind-dial>
+  <input type="range" min="0" max="360" [(ngModel)]="direction">
+  <input type="range" min="0" max="100" [(ngModel)]="speed">
+</div>
