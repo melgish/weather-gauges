@@ -9,6 +9,6 @@ describe('weather-gauges App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to wg!');
+    expect(page.getParagraphText()).toEqual('@njfiorello/weather-gauges');
   });
 });

@@ -38,6 +38,14 @@ module.exports = function (config) {
           '--no-sandbox',
         ],
       },
+      ChromeNoSandbox: {
+        base: 'Chrome',
+        displayName: 'NoSandbox',
+        flags: [
+          // --no-sandbox is required for Jenkins/Travis
+          '--no-sandbox',
+        ],
+      },
     },
   });
 };
