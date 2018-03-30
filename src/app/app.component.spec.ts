@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { FarenheitDialModule, WindDialModule, HumidityDialModule, CelsiusDialModule } from './modules/public_api';
+import { WeatherGaugesModule } from '../weather-gauges';
 import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
@@ -11,10 +11,7 @@ describe('AppComponent', () => {
       ],
       imports: [
         FormsModule,
-        CelsiusDialModule,
-        FarenheitDialModule,
-        HumidityDialModule,
-        WindDialModule,
+        WeatherGaugesModule,
       ]
     }).compileComponents();
   }));

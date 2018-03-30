@@ -3,12 +3,12 @@ import { Component, OnChanges, Input, SimpleChange } from '@angular/core';
 @Component({
   selector: 'wg-wind-dial',
   templateUrl: './wind-dial.component.html',
-  styleUrls: ['./wind-dial.component.scss']
+  // styleUrls: ['./wind-dial.component.scss']
 })
 export class WindDialComponent implements OnChanges {
   @Input() direction = 0;
   @Input() speed = 0;
-  @Input() units = "mph";
+  @Input() units = 'mph';
   rotate = 'rotate(0)';
 
   ngOnChanges(changes: { [propkey: string]: SimpleChange }) {
