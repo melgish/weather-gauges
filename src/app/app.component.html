@@ -1,19 +1,19 @@
-<h1>{{title}}</h1>
-<hr/>
-<div class="dial">
-  <wg-farenheit-dial [temperature]="farenheit"></wg-farenheit-dial>
-  <input type="range" min="-30" max="150" [(ngModel)]="farenheit">
-</div>
-<div class="dial">
-  <wg-celsius-dial [temperature]="celsius"></wg-celsius-dial>
-  <input type="range" min="-30" max="70" [(ngModel)]="celsius">
-</div>
-<div class="dial">
-  <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
-  <input type="range" min="0" max="100" [(ngModel)]="humidity">
-</div>
-<div class="dial">
-  <wg-wind-dial [direction]="direction" [speed]="speed" [units]="units"></wg-wind-dial>
-  <input type="range" min="0" max="360" [(ngModel)]="direction">
-  <input type="range" min="0" max="100" [(ngModel)]="speed">
+<nav class="navbar navbar-light navbar-expand-sm bg-light">
+  <a routerLink="/" class="navbar-brand">{{ title }}</a>
+  <ul class="navbar-nav">
+    <li class="nav-item" ngbDropdown>
+      <a class="nav-link" ngbDropdownToggle>
+        Components
+      </a>
+      <div ngbDropdownMenu>
+        <a routerLink="/celsius" routerLinkActive="active" class="dropdown-item" href="#">Celsius Dial</a>
+        <a routerLink="/farenheit" routerLinkActive="active" class="dropdown-item" href="#">Farenheit Dial</a>
+        <a routerLink="/humidity" routerLinkActive="active" class="dropdown-item" href="#">Humidity Dial</a>
+        <a routerLink="/wind" routerLinkActive="active" class="dropdown-item" href="#">Wind Dial</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
 </div>

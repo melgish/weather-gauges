@@ -1,21 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { WeatherGaugesModule } from '../weather-gauges';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { CelsiusComponent } from './celsius/celsius.component';
+import { FarenheitComponent } from './farenheit/farenheit.component';
+import { HumidityComponent } from './humidity/humidity.component';
+import { WindComponent } from './wind/wind.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    CelsiusComponent,
+    FarenheitComponent,
+    HumidityComponent,
+    WindComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    WeatherGaugesModule
+    AppRoutingModule,
+    NgbModule.forRoot(),
+    WeatherGaugesModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
