@@ -1,28 +1,22 @@
-<div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-      <div class="card">
-        <div class="card-body">
-          <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
-        </div>
-        <div class="card-footer">
-          <label>Humidity</label>
-          <input class="form-control" type="range" min="-5" max="105" [(ngModel)]="humidity">
-        </div>
+<div class="row no-gutters pt-2 pb-2">
+  <div class="col-lg-4 col-md-4 col-sm-6 pr-2">
+    <div class="card">
+      <div class="card-body">
+        <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
       </div>
-    </div>
-    <div class="col-lg-9 col-md-8 col-sm-6 col-6">
-      <div class="card">
-        <div class="card-header">
-           <b>wg-humidity-dial</b>
-        </div>
-        <div class="card-body">
-          <label>Usage:</label>
-          <pre>&lt;wg-humidity-dial [humidity]="humidity"&gt;&lt;/wg-humidity-dial&gt;</pre>
-          <div class="row">
-            <div class="col">Effective Range</div>
-            <div class="col">0 to 100 %</div>
-          </div>
-        </div>
+      <div class="card-footer p-1">
+        <label>Humidity</label>
+        <input class="w-100" type="range" min="-5" max="105" [(ngModel)]="humidity">
       </div>
     </div>
   </div>
+  <div class="col-lg-8 col-md-8 col-sm-6 pl-2">
+    <div class="card">
+      <div class="card-header">
+        <b>wg-humidity-dial</b>
+      </div>
+      <pre class="language-html card-body"><code class="language-html" [innerHTML]="demo"></code></pre>
+      <div class="card-footer">Effective Range: 0 to 100 %</div>
+    </div>
+  </div>
+</div>

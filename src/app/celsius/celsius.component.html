@@ -1,27 +1,23 @@
-<div class="row">
-  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+<div class="row no-gutters pt-2 pb-2">
+  <div class="col-lg-4 col-md-4 col-sm-6 pr-2">
     <div class="card">
       <div class="card-body">
         <wg-celsius-dial [temperature]="celsius"></wg-celsius-dial>
       </div>
-      <div class="card-footer">
+      <div class="card-footer p-1">
         <label>Temperature</label>
-        <input class="form-control" type="range" min=-35 max="75" [(ngModel)]="celsius">
+        <input class="w-100" type="range" min="-35" max="75" [(ngModel)]="celsius">
       </div>
     </div>
   </div>
-  <div class="col-lg-9 col-md-8 col-sm-6 col-6">
+  <div class="col-lg-8 col-md-8 col-sm-6 pl-2">
     <div class="card">
       <div class="card-header">
-         <b>wg-celsius-dial</b>
+        <b>wg-celsius-dial</b>
       </div>
-      <div class="card-body">
-        <label>Usage:</label>
-        <pre>&lt;wg-celsius-dial [temperature]="celsius"&gt;&lt;/wg-celsius-dial&gt;</pre>
-        <div class="row">
-          <div class="col">Effective Range</div>
-          <div class="col">-30&deg; to 70&deg; C</div>
-        </div>
+      <pre class="language-html card-body"><code class="language-html" [innerHTML]="demo"></code></pre>
+      <div class="card-footer">
+        Effective Range: -30&deg; to 70&deg; C
       </div>
     </div>
   </div>

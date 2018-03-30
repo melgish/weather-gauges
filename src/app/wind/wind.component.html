@@ -2,13 +2,13 @@
   <div class="col-lg-3 col-md-4 col-sm-6 col-6">
     <div class="card">
       <div class="card-body">
-        <wg-wind-dial [direction]="direction" [speed]="speed" [units]="units"></wg-wind-dial>
+        <wg-wind-dial [direction]="direction" [speed]="speed" [units]="'MPH'"></wg-wind-dial>
       </div>
-      <div class="card-footer">
+      <div class="card-footer p-1">
         <label>Direction</label>
-        <input class="form-control" type="range" min="0" max="360" [(ngModel)]="direction">
+        <input class="w-100" type="range" min="0" max="360" [(ngModel)]="direction">
         <label>Speed</label>
-        <input class="form-control" type="range" min="0" max="140" [(ngModel)]="speed">
+        <input class="w-100" type="range" min="0" max="140" [(ngModel)]="speed">
       </div>
     </div>
   </div>
@@ -17,16 +17,10 @@
       <div class="card-header">
         <b>wg-wind-dial</b>
       </div>
-      <div class="card-body">
-        <label>Usage:</label>
-        <pre>&lt;wg-wind-dial
-  [direction]="direction"
-  [speed]="speed"
-  [units]="units"&gt;&lt;/wg-wind-dial&gt;</pre>
-        <div class="row">
-          <div class="col">Effective Range</div>
-          <div class="col">0 to 360&deg;</div>
-        </div>
+      <pre class="language-html card-body"><code class="language-html" [innerHTML]="demo"></code></pre>
+      <div class="card-footer">
+        Effective Compass Range: 0 to 360&deg;<br>
+        Effective Speed Range: 0 to 9999.9
       </div>
     </div>
   </div>
