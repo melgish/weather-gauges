@@ -4,6 +4,7 @@
   "version": "0.1.1",
   "license": "MIT",
   "description": "some svg gauges powered by Angular",
+  "homepage": "https://weathergauges.njfiorello.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -70,6 +71,5 @@
       ],
       "licensePath": "./LICENSE"
     }
-  },
-  "dependencies": {}
+  }
 }
