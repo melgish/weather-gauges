@@ -17,11 +17,11 @@ export class ClockDialComponent implements OnChanges {
 
   updateHands(time) {
     // 360 / 60 = 6 degrees per second
-    let s = time.getSeconds() * 6;
+    const s = time.getSeconds() * 6;
     // 360 / 60 = 6 degrees per minute plus partial second
-    let m = time.getMinutes() * 6 + s / 60;
+    const m = time.getMinutes() * 6 + s / 60;
     // 360 / 12 = 30 degrees per hour plus partials
-    let h = time.getHours() * 30 + m / 12;
+    const h = time.getHours() * 30 + m / 12;
 
     this.time = time;
     this.second = `rotate(${s})`;

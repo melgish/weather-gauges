@@ -1,4 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, NgZone } from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/interval';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +10,24 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   now = new Date();
-  timer: number;
+  timer: Observable<number>;
+  sub: Subscription;
+
+  constructor(private readonly ngZone: NgZone) {
+    this.timer = Observable.interval(1000);
+  }
 
   ngOnInit() {
-    this.timer = window.setInterval(() => this.now = new Date(), 1000);
+    // this should probably be a heartbeat service anyone can subscribe to
+    // prevents protractor from zoning out
+    this.ngZone.runOutsideAngular(() => {
+      this.sub = this.timer.subscribe(() => {
+        this.ngZone.run(() => this.now = new Date());
+      });
+    });
   }
 
   ngOnDestroy() {
-    window.clearInterval(this.timer);
+    this.sub.unsubscribe();
   }
 }

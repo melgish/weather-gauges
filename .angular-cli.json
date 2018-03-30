@@ -37,7 +37,7 @@
       "root": "src",
       "outDir": "dist",
       "main": "weather-gauges/index.ts",
-      "tsconfig": "tsconfig.app.json",
+      "tsconfig": "tsconfig.lib.json",
       "prefix": "wg"
     }
   ],

@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('wg-root nav .navbar-brand')).getText();
+    return element(by.css('nav .navbar-brand')).getText();
   }
 }

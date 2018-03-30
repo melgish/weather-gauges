@@ -120,13 +120,14 @@
     "directive-selector": [
       true,
       "attribute",
-      "wg",
+      ["app", "wg"],
+      "app",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "wg",
+      ["app", "wg"],
       "kebab-case"
     ],
     "no-output-on-prefix": true,

@@ -9,6 +9,7 @@ import { FarenheitComponent } from './farenheit/farenheit.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { WindComponent } from './wind/wind.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { ClockComponent } from './clock/clock.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -19,7 +20,8 @@ describe('AppComponent', () => {
         CelsiusComponent,
         FarenheitComponent,
         HumidityComponent,
-        WindComponent
+        WindComponent,
+        ClockComponent
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' } ,
