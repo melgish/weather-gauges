@@ -1,26 +1,36 @@
-<div class="card-group">
-  <div class="card"routerLink="celsius">
-    <div class="card-header text-center">wg-celsius-dial</div>
-    <div class="card-body">
-      <wg-celsius-dial [temperature]="30"></wg-celsius-dial>
-    </div>
-  </div>
-  <div class="card" routerLink="farenheit">
-    <div class="card-header text-center">wg-farenheit-dial</div>
-    <div class="card-body">
-      <wg-farenheit-dial [temperature]="75"></wg-farenheit-dial>
-    </div>
-  </div>
-  <div class="card" routerLink="humidity">
-    <div class="card-header text-center">wg-humidity-dial</div>
-    <div class="card-body">
-      <wg-humidity-dial [humidity]="75"></wg-humidity-dial>
-    </div>
-  </div>
-  <div class="card" routerLink="wind">
-    <div class="card-header text-center">wg-wind-dial</div>
-    <div class="card-body">
-      <wg-wind-dial [direction]="45" [speed]="12.3" [units]="'MPH'"></wg-wind-dial>
+<div class="row pt-2 pb-2">
+  <div class="col">
+    <div class="card-group">
+      <div class="card" routerLink="celsius">
+        <div class="card-header text-center">wg-celsius-dial</div>
+        <div class="card-body">
+          <wg-celsius-dial [temperature]="30"></wg-celsius-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="farenheit">
+        <div class="card-header text-center">wg-farenheit-dial</div>
+        <div class="card-body">
+          <wg-farenheit-dial [temperature]="75"></wg-farenheit-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="humidity">
+        <div class="card-header text-center">wg-humidity-dial</div>
+        <div class="card-body">
+          <wg-humidity-dial [humidity]="75"></wg-humidity-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="wind">
+        <div class="card-header text-center">wg-wind-dial</div>
+        <div class="card-body">
+          <wg-wind-dial [direction]="45" [speed]="12.3" [units]="'MPH'"></wg-wind-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="clock">
+        <div class="card-header text-center">wg-clock-dial</div>
+        <div class="card-body">
+          <wg-clock-dial [time]="now"></wg-clock-dial>
+        </div>
+      </div>
     </div>
   </div>
 </div>
