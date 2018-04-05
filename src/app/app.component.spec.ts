@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { WeatherGaugesModule } from '../weather-gauges';
+import { WeatherGaugesModule, PressureInDialComponent } from '../weather-gauges';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { CelsiusComponent } from './celsius/celsius.component';
@@ -10,6 +10,8 @@ import { HumidityComponent } from './humidity/humidity.component';
 import { WindComponent } from './wind/wind.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { ClockComponent } from './clock/clock.component';
+import { InchesComponent } from './inches/inches.component';
+import { MillibarsComponent } from './millibars/millibars.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -21,7 +23,9 @@ describe('AppComponent', () => {
         FarenheitComponent,
         HumidityComponent,
         WindComponent,
-        ClockComponent
+        ClockComponent,
+        InchesComponent,
+        MillibarsComponent
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' } ,

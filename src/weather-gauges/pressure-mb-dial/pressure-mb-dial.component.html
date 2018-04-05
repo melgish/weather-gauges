@@ -1,0 +1,132 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pressure-mb-dial-metalic" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#888"></stop>
+      <stop offset="50%" stop-color="#def"></stop>
+      <stop offset="100%" stop-color="#888"></stop>
+    </linearGradient>
+
+    <filter id="pressure-mb-dial-drop-shadow" width="1.5" height="1.5">
+      <feOffset in="SourceAlpha" result="offOut" dx="1" dy="1"></feOffset>
+      <feGaussianBlur in="offOut" result="blurOut" stdDeviation="1"></feGaussianBlur>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+    </filter>
+
+    <filter id="pressure-mb-dial-inner-shadow" x0="-0.5" y0="-0.5" width="1.25" height="1.25">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"></feGaussianBlur>
+      <feOffset dx="3" dy="2"></feOffset>
+      <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
+      <feFlood flood-color="#444" flood-opacity="0.75"></feFlood>
+      <feComposite in2="shadowDiff" operator="in"></feComposite>
+      <feComposite in2="SourceGraphic" operator="over" result="firstFilter"></feComposite>
+      <feGaussianBlur in="firstFilter" stdDeviation="2" result="blur2"></feGaussianBlur>
+      <feOffset dx="-3" dy="-2"></feOffset>
+      <feComposite in2="firstFilter" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
+      <feFlood flood-color="#444" flood-opacity="0.75"></feFlood>
+      <feComposite in2="shadowDiff" operator="in"></feComposite>
+      <feComposite in2="firstFilter" operator="over"></feComposite>
+    </filter>
+
+    <filter id="pressure-mb-dial-glass-blur">
+      <feGaussianBlur stdDeviation="1.75"></feGaussianBlur>
+    </filter>
+    <clipPath id="pressure-mb-dial-glass-clip">
+      <circle r="43"></circle>
+    </clipPath>
+
+    <g id="pressure-mb-dial-ticks">
+      <line y1="-44" y2="-39" stroke-width=".8" stroke="black"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(2.5)"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(5)"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(7.5)"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(10)"></line>
+      <line y1="-44" y2="-40" stroke-width=".6" stroke="black" transform="rotate(12.5)"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(15)"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(17.5)"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(20)"></line>
+      <line y1="-44" y2="-41" stroke-width=".6" stroke="black" transform="rotate(22.5)"></line>
+    </g>
+  </defs>
+  <g transform="translate(50 50)" font-family="tahoma" dominant-baseline="middle" text-anchor="middle" font-size="6">
+    <!-- housing -->
+    <circle r="48" fill="url(#pressure-mb-dial-metalic)" filter="url(#pressure-mb-dial-drop-shadow)"></circle>
+
+    <!-- face -->
+    <circle r="44" fill="#ffe" fill-opacity="0.6" stroke="black" stroke-width="0.2" stroke-opacity="0.5" filter="url(#pressure-mb-dial-inner-shadow)"></circle>
+
+    <!-- ticks -->
+    <g>
+      <g transform="rotate(-125)">
+        <use href="#pressure-mb-dial-ticks"></use>
+        <text y="-33" transform="rotate(125 0 -33)">880</text>
+      </g>
+      <g transform="rotate(-100)">
+        <use href="#pressure-mb-dial-ticks"></use>
+        <text y="-33" transform="rotate(100 0 -33)">900</text>
+      </g>
+      <g transform="rotate(-75)">
+        <use href="#pressure-mb-dial-ticks"></use>
+        <text y="-32" transform="rotate(75 0 -32)">920</text>
+      </g>
+      <g transform="rotate(-50)">
+          <use href="#pressure-mb-dial-ticks"></use>
+          <text y="-33" transform="rotate(50 0 -33)">940</text>
+        </g>
+        <g transform="rotate(-25)">
+          <use href="#pressure-mb-dial-ticks"></use>
+          <text y="-34" transform="rotate(25 0 -34)">960</text>
+        </g>
+        <g transform="rotate(0)">
+        <use href="#pressure-mb-dial-ticks"></use>
+        <text y="-34" transform="rotate(0 0 -34)">980</text>
+      </g>
+      <g transform="rotate(25)">
+        <use href="#pressure-mb-dial-ticks"></use>
+        <text y="-33" transform="rotate(-25 0 -33)">1000</text>
+      </g>
+      <g transform="rotate(50)">
+        <use href="#pressure-mb-dial-ticks"></use>
+        <text y="-32" transform="rotate(-50 0 -32)">1020</text>
+      </g>
+      <g transform="rotate(75)">
+        <use href="#pressure-mb-dial-ticks"></use>
+        <text y="-31" transform="rotate(-75 0 -31)">1040</text>
+      </g>
+      <g transform="rotate(100)">
+          <use href="#pressure-mb-dial-ticks"></use>
+          <text y="-31" transform="rotate(-100 0 -31)">1060</text>
+        </g>
+        <g transform="rotate(125)">
+        <line y1="-44" y2="-40" stroke-width=".8" stroke="black"></line>
+        <text y="-33" transform="rotate(-125 0 -33)">1080</text>
+      </g>
+    </g>
+
+    <!-- lcd display -->
+    <g transform="translate(0 14)">
+      <text>Pressure</text>
+      <rect y="4" x="-20" width="40" height="14" rx="3" ry="3" fill="#def" filter="url(#pressure-mb-dial-inner-shadow)"></rect>
+      <text class="lcd" y="12" font-size="9">{{current|number:'1.0-0'}} mb</text>
+    </g>
+
+    <!-- needle -->
+    <g filter="url(#pressure-mb-dial-drop-shadow)">
+      <g class="red-needle" data-bind-attr.transform="rotCurrent" fill="#e00">
+        <circle r="4"></circle>
+        <path d="M-3 0 L-.4 -40 L.4 -40 L3 0"></path>
+        <circle r="0.75" fill="black"></circle>
+      </g>
+    </g>
+    <g filter="url(#pressure-mb-dial-drop-shadow)" *ngIf="previous">
+      <g class="blue-needle" data-bind-attr.transform="rotPrevious" fill="#00e">
+        <circle r="2.5"></circle>
+        <path d="M-1 0 L-.3 -40 L.3 -40 L1 0"></path>
+        <circle r="0.75" fill="black"></circle>
+      </g>
+    </g>
+
+    <!-- crystal -->
+    <circle r="53" cx="10" cy="10" fill="none" stroke="white" stroke-width="4" opacity=".5" filter="url(#pressure-mb-dial-glass-blur)"
+      clip-path="url(#pressure-mb-dial-glass-clip)"></circle>
+  </g>
+</svg>

@@ -76,13 +76,13 @@
     <g transform="translate(0 -22)">
       <text>Direction</text>
       <rect y="4" x="-20" width="40" height="14" rx="3" ry="3" fill="#def" filter="url(#wind-dial-inner-shadow)"></rect>
-      <text class="lcd-0" y="12" font-size="9">{{direction|number:'.1'}}</text>
+      <text class="lcd-0" y="12" font-size="9">{{direction|number:'1.1-1'}}&deg;</text>
     </g>
 
     <g transform="translate(0 2)">
       <text>{{units || 'Speed'}}</text>
       <rect y="4" x="-20" width="40" height="14" rx="3" ry="3" fill="#def" filter="url(#wind-dial-inner-shadow)"></rect>
-      <text class="lcd-1" y="12" font-size="9">{{speed|number:'.1'}}</text>
+      <text class="lcd-1" y="12" font-size="9">{{speed|number:'1.1-1'}}</text>
     </g>
 
     <!-- needle -->

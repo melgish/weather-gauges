@@ -6,6 +6,9 @@ import { FarenheitComponent } from './farenheit/farenheit.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { WindComponent } from './wind/wind.component';
 import { ClockComponent } from './clock/clock.component';
+import { InchesComponent } from './inches/inches.component';
+import { MillibarsComponent } from './millibars/millibars.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +17,8 @@ const routes: Routes = [
   { path: 'humidity', component: HumidityComponent },
   { path: 'wind', component: WindComponent },
   { path: 'clock', component: ClockComponent },
+  { path: 'inches', component: InchesComponent },
+  { path: 'millibars', component: MillibarsComponent },
 ];
 
 @NgModule({

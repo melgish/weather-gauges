@@ -1,22 +1,22 @@
 <div class="row pt-2 pb-2">
   <div class="col">
-    <div class="card-group">
+    <div class="card-deck">
       <div class="card" routerLink="celsius">
         <div class="card-header text-center">wg-celsius-dial</div>
         <div class="card-body">
-          <wg-celsius-dial [temperature]="30"></wg-celsius-dial>
+          <wg-celsius-dial [temperature]="celsius"></wg-celsius-dial>
         </div>
       </div>
       <div class="card" routerLink="farenheit">
         <div class="card-header text-center">wg-farenheit-dial</div>
         <div class="card-body">
-          <wg-farenheit-dial [temperature]="75"></wg-farenheit-dial>
+          <wg-farenheit-dial [temperature]="farenheit"></wg-farenheit-dial>
         </div>
       </div>
       <div class="card" routerLink="humidity">
         <div class="card-header text-center">wg-humidity-dial</div>
         <div class="card-body">
-          <wg-humidity-dial [humidity]="75"></wg-humidity-dial>
+          <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
         </div>
       </div>
       <div class="card" routerLink="wind">
@@ -31,6 +31,27 @@
           <wg-clock-dial [time]="now"></wg-clock-dial>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="row pt-2 pb-2">
+  <div class="col">
+    <div class="card-deck">
+      <div class="card" routerLink="inches">
+        <div class="card-header text-center">wg-pressure-in-dial</div>
+        <div class="card-body">
+          <wg-pressure-in-dial [current]="currentInches" [previous]="previousInches"></wg-pressure-in-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="millibars">
+        <div class="card-header text-center">wg-pressure-mb-dial</div>
+        <div class="card-body">
+          <wg-pressure-mb-dial [current]="currentMillibars" [previous]="previousMillibars"></wg-pressure-mb-dial>
+        </div>
+      </div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
     </div>
   </div>
 </div>

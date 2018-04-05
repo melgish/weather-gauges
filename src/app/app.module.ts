@@ -11,6 +11,8 @@ import { FarenheitComponent } from './farenheit/farenheit.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { WindComponent } from './wind/wind.component';
 import { ClockComponent } from './clock/clock.component';
+import { InchesComponent } from './inches/inches.component';
+import { MillibarsComponent } from './millibars/millibars.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ClockComponent } from './clock/clock.component';
     HumidityComponent,
     WindComponent,
     ClockComponent,
+    InchesComponent,
+    MillibarsComponent,
   ],
   imports: [
     BrowserModule,

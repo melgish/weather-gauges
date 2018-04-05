@@ -1,0 +1,27 @@
+<div class="row no-gutters pt-2 pb-2">
+  <div class="col-lg-4 col-md-4 col-sm-6 pr-2">
+    <div class="card">
+      <div class="card-body">
+        <wg-pressure-mb-dial [current]="current" [previous]="previous"></wg-pressure-mb-dial>
+      </div>
+      <div class="card-footer p-1">
+        <label>Pressure</label>
+        <input class="w-100" type="range" min="880" max="1080" [(ngModel)]="current">
+        <label>Previous <input type="checkbox" [(ngModel)]="previous"></label>
+        <input class="w-100" type="range" min="880" max="1080" [(ngModel)]="previous">
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8 col-md-8 col-sm-6 pl-2">
+    <div class="card">
+      <div class="card-header">
+        <b>wg-pressure-mb-dial</b>
+      </div>
+      <pre class="language-html card-body"><code class="language-html" [innerHTML]="demo"></code></pre>
+      <div class="card-footer">
+        Effective Range: 880 to 1080 inHg<br>
+        [previous] is optional and if falsy, will hide blue needle
+      </div>
+    </div>
+  </div>
+</div>
