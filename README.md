@@ -2,7 +2,9 @@
 
 # Weather Gauges
 ## https://weathergauges.njfiorello.com
-Some svg gauges relating to weather.
+Some svg gauges relating to weather.  Built with Angular 5.
+
+
 
 
 
