@@ -5,3 +5,4 @@ export * from './wind-dial/wind-dial.component';
 export * from './pressure-in-dial/pressure-in-dial.component';
 export * from './pressure-mb-dial/pressure-mb-dial.component';
 export * from './weather-gauges.module';
+export * from './temp-sq-dial/temp-sq-dial.component';

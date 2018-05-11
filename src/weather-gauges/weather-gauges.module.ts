@@ -7,6 +7,7 @@ import { WindDialComponent } from './wind-dial/wind-dial.component';
 import { ClockDialComponent } from './clock-dial/clock-dial.component';
 import { PressureInDialComponent } from './pressure-in-dial/pressure-in-dial.component';
 import { PressureMbDialComponent } from './pressure-mb-dial/pressure-mb-dial.component';
+import { TempSqDialComponent } from './temp-sq-dial/temp-sq-dial.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -17,7 +18,8 @@ import { PressureMbDialComponent } from './pressure-mb-dial/pressure-mb-dial.com
     WindDialComponent,
     ClockDialComponent,
     PressureInDialComponent,
-    PressureMbDialComponent
+    PressureMbDialComponent,
+    TempSqDialComponent
   ],
   exports: [
     CelsiusDialComponent,
@@ -26,7 +28,8 @@ import { PressureMbDialComponent } from './pressure-mb-dial/pressure-mb-dial.com
     WindDialComponent,
     ClockDialComponent,
     PressureInDialComponent,
-    PressureMbDialComponent
+    PressureMbDialComponent,
+    TempSqDialComponent
   ]
 })
 export class WeatherGaugesModule { }

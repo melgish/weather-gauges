@@ -8,6 +8,7 @@ import { WindComponent } from './wind/wind.component';
 import { ClockComponent } from './clock/clock.component';
 import { InchesComponent } from './inches/inches.component';
 import { MillibarsComponent } from './millibars/millibars.component';
+import { TemperatureComponent } from './temperature/temperature.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'clock', component: ClockComponent },
   { path: 'inches', component: InchesComponent },
   { path: 'millibars', component: MillibarsComponent },
+  { path: 'temperature', component: TemperatureComponent },
 ];
 
 @NgModule({

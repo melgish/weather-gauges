@@ -12,6 +12,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { ClockComponent } from './clock/clock.component';
 import { InchesComponent } from './inches/inches.component';
 import { MillibarsComponent } from './millibars/millibars.component';
+import { TemperatureComponent } from './temperature/temperature.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -25,7 +26,8 @@ describe('AppComponent', () => {
         WindComponent,
         ClockComponent,
         InchesComponent,
-        MillibarsComponent
+        MillibarsComponent,
+        TemperatureComponent
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' } ,

@@ -49,7 +49,12 @@
           <wg-pressure-mb-dial [current]="currentMillibars" [previous]="previousMillibars"></wg-pressure-mb-dial>
         </div>
       </div>
-      <div class="card"></div>
+      <div class="card" routerLink="temperature">
+        <div class="card-header text-center">wg-temp-sq-dial</div>
+        <div class="card-body">
+          <wg-temp-sq-dial [temperature]="celsius"></wg-temp-sq-dial>
+        </div>
+      </div>
       <div class="card"></div>
       <div class="card"></div>
     </div>
