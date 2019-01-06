@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// tslint:disable-next-line:no-implicit-dependencies
 import { By } from '@angular/platform-browser';
 import { DebugElement, SimpleChange } from '@angular/core';
 import { HumidityDialComponent } from './humidity-dial.component';

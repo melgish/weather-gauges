@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "no-implicit-dependencies": true,
+    "no-unused-variable": [true, { "check-parameters": false }]
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 const C = [0, 1, 2, 3, 4, 5, 6];
 const F = [0, 1, 2, 3, 4, 5, 6];
