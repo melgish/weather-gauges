@@ -14,9 +14,19 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "module": "es2015",
+    "baseUrl": "./",
+    "paths": {
+      "@njfiorello/weather-gauges": [
+        "dist/weather-gauges"
+      ],
+      "@njfiorello/weather-gauges/*": [
+        "dist/weather-gauges/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "preserveWhitespaces": false
-  },
+  }
 }

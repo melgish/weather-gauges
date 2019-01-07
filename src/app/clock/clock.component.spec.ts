@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SimpleChange } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { WeatherGaugesModule } from '../../weather-gauges';
+import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { ClockComponent } from './clock.component';
 
 describe('ClockComponent', () => {

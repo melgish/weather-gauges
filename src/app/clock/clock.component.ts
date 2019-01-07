@@ -1,8 +1,5 @@
 import { Component, OnInit, OnDestroy, NgZone } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/interval';
-import { Subscription } from 'rxjs/Subscription';
-
+import { Observable, Subscription, interval} from 'rxjs';
 
 // loading this via REQUIRE so prismjs will convert it
 const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
@@ -18,7 +15,7 @@ export class ClockComponent implements OnInit, OnDestroy {
   sub: Subscription;
 
   constructor(private readonly ngZone: NgZone) {
-    this.timer = Observable.interval(1000);
+    this.timer = interval(1000);
   }
 
   ngOnInit() {

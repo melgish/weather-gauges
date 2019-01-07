@@ -1,0 +1,17 @@
+{
+  "name": "@njfiorello/weather-gauges",
+  "version": "0.2.0",
+  "license": "MIT",
+  "description": "Some svg gauges relating to weather.",
+  "keywords": [
+    "weather",
+    "angular",
+    "svg",
+    "gauges"
+  ],
+  "homepage": "https://weathergauges.njfiorello.com",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "no-implicit-dependencies": true,
+    "no-unused-variable": [true, { "check-parameters": false }],
+    "directive-selector": [
+        true,
+        "attribute",
+        "wg",
+        "camelCase"
+    ],
+    "component-selector": [
+        true,
+        "element",
+        "wg",
+        "kebab-case"
+    ]
+  }
+}

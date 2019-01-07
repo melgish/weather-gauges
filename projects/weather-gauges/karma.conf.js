@@ -12,38 +12,20 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    client:{
+    client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, 'coverage'), reports: [ 'html', 'lcovonly' ],
+      dir: require('path').join(__dirname, '../../coverage'),
+      reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
-    
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Headless'],
-    singleRun: false,
-    customLaunchers: {
-      Headless: {
-        base: 'ChromeHeadless',
-        displayName: 'Headless',
-        flags: [
-          // --no-sandbox is required for Jenkins
-          '--no-sandbox',
-        ],
-      },
-      ChromeNoSandbox: {
-        base: 'Chrome',
-        displayName: 'NoSandbox',
-        flags: [
-          // --no-sandbox is required for Jenkins/Travis
-          '--no-sandbox',
-        ],
-      },
-    },
+    browsers: ['Chrome'],
+    singleRun: false
   });
 };

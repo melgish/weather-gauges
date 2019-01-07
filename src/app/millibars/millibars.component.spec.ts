@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MillibarsComponent } from './millibars.component';
 import { FormsModule } from '@angular/forms';
-import { WeatherGaugesModule } from '../../weather-gauges';
+import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 
 describe('MillibarsComponent', () => {
   let component: MillibarsComponent;

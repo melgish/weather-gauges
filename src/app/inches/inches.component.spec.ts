@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InchesComponent } from './inches.component';
 import { FormsModule } from '@angular/forms';
-import { WeatherGaugesModule } from '../../weather-gauges';
+import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 
 describe('InchesComponent', () => {
   let component: InchesComponent;
