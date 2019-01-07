@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChange, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'wg-clock-dial',
@@ -11,11 +11,18 @@ export class ClockDialComponent implements OnChanges {
   minute: string;
   hour: string;
 
+  /**
+   * Instances are constructed by angular
+   */
   constructor() {
     this.updateHands(this.time);
   }
 
-  updateHands(time) {
+  /**
+   * Update display
+   * @param time time to display on the clock
+   */
+  updateHands(time: Date): void {
     // 360 / 60 = 6 degrees per second
     const s = time.getSeconds() * 6;
     // 360 / 60 = 6 degrees per minute plus partial second
@@ -29,7 +36,15 @@ export class ClockDialComponent implements OnChanges {
     this.hour = `rotate(${h})`;
   }
 
-  ngOnChanges(changes: { [propkey: string]: SimpleChange }) {
-    this.updateHands(this.time);
+  /**
+   * Called by angular on update to input
+   * @ignore
+   * @param changes angular changes
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    // using async pipe resulted in null...
+    if (this.time) {
+      this.updateHands(this.time);
+    }
   }
 }

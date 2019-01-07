@@ -20,10 +20,6 @@ describe('ClockDialComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
   describe('ngOnChanges', () => {
     it('should call updateHands for any updates', () => {
       const now = new Date();

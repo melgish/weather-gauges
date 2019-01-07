@@ -28,7 +28,7 @@
       <div class="card" routerLink="clock">
         <div class="card-header text-center">wg-clock-dial</div>
         <div class="card-body">
-          <wg-clock-dial [time]="now"></wg-clock-dial>
+          <wg-clock-dial [time]="now$ | async"></wg-clock-dial>
         </div>
       </div>
     </div>

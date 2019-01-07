@@ -2,7 +2,7 @@
   <div class="col-lg-4 col-md-4 col-sm-6 pr-2">
     <div class="card">
       <div class="card-body">
-        <wg-clock-dial [time]="now"></wg-clock-dial>
+        <wg-clock-dial [time]="now$ | async"></wg-clock-dial>
       </div>
     </div>
   </div>

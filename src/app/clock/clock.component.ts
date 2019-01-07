@@ -1,34 +1,17 @@
-import { Component, OnInit, OnDestroy, NgZone } from '@angular/core';
-import { Observable, Subscription, interval} from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Observable, interval } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-// loading this via REQUIRE so prismjs will convert it
+// loading this via REQUIRE so prismjs will convert it at compile time.
 const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
 
 @Component({
   selector: 'app-clock',
   templateUrl: './clock.component.html',
 })
-export class ClockComponent implements OnInit, OnDestroy {
-  now = new Date();
-  demo = DEMO;
-  timer: Observable<number>;
-  sub: Subscription;
-
-  constructor(private readonly ngZone: NgZone) {
-    this.timer = interval(1000);
-  }
-
-  ngOnInit() {
-    // this should probably be a heartbeat service anyone can subscribe to
-    // prevents protractor from zoning out
-    this.ngZone.runOutsideAngular(() => {
-      this.sub = this.timer.subscribe(() => {
-        this.ngZone.run(() => this.now = new Date());
-      });
-    });
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
+export class ClockComponent {
+  /**
+   * Current time to display
+   */
+  now$: Observable<Date> = interval(1000).pipe(map(() => new Date()));
 }

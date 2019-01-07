@@ -1,15 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SimpleChange } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { ClockComponent } from './clock.component';
+import { By } from '@angular/platform-browser';
+
 
 describe('ClockComponent', () => {
   let component: ClockComponent;
   let fixture: ComponentFixture<ClockComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async done => {
+    await TestBed.configureTestingModule({
       declarations: [ ClockComponent ],
       imports: [
         FormsModule,
@@ -17,19 +18,26 @@ describe('ClockComponent', () => {
       ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
-    this.unsubscribe = () => {};
     fixture = TestBed.createComponent(ClockComponent);
     component = fixture.componentInstance;
-    // replace observable, call it immediately
-    spyOn(component.timer, 'subscribe').and.callFake(fn => (fn(), this));
+
     fixture.detectChanges();
+
+    done();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component.demo).toBeDefined();
+  });
+
+  it('should display the wg-clock-dial component', () => {
+    const dial = fixture.debugElement.query(By.css('wg-clock-dial'));
+    expect(dial).toBeDefined();
+  });
+
+  it('should display demo code block', () => {
+    const pre = fixture.debugElement.query(By.css('pre'));
+    expect(pre).toBeDefined();
   });
 });

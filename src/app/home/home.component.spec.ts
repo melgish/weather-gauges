@@ -20,11 +20,9 @@ describe('HomeComponent', () => {
   }));
 
   beforeEach(() => {
-    this.unsubscribe = () => {};
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
-    // replace observable, call it immediately
-    spyOn(component.timer, 'subscribe').and.callFake(fn => (fn(), this));
+
     fixture.detectChanges();
   });
 
