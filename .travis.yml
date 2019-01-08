@@ -23,4 +23,5 @@ script:
   # Use Chromium instead of Chrome.
   - export CHROME_BIN=chromium-browser
   - npm run test -- weather-gauges --watch=false --progress=false --browsers=Headless --reporters=kjhtml
-  - xvfb-run -a npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+  - npm run test -- demo --watch=false --progress=false --browsers=Headless --reporters=kjhtml
+  # - xvfb-run -a npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
