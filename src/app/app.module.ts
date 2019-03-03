@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,7 +32,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule.forRoot(),
+    NgbDropdownModule,
     WeatherGaugesModule,
   ],
   providers: [
