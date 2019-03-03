@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable, interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -13,5 +13,9 @@ export class ClockComponent {
   /**
    * Current time to display
    */
-  now$: Observable<Date> = interval(1000).pipe(map(() => new Date()));
+  readonly now$: Observable<Date> = interval(1000).pipe(map(() => new Date()));
+  /**
+   * Demo usage
+   */
+  readonly demo = DEMO;
 }
