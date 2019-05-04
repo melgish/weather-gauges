@@ -11,7 +11,11 @@ const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
 })
 export class ClockComponent {
   /**
+   * sample output
+   */
+  readonly demo = DEMO;
+  /**
    * Current time to display
    */
-  now$: Observable<Date> = interval(1000).pipe(map(() => new Date()));
+  readonly now$: Observable<Date> = interval(1000).pipe(map(() => new Date()));
 }
