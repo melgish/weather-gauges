@@ -21,13 +21,22 @@ describe('ClockDialComponent', () => {
   });
 
   describe('ngOnChanges', () => {
-    it('should call updateHands for any updates', () => {
+    it('should call updateHands when time is set', () => {
       const now = new Date();
       spyOn(component, 'updateHands');
       component.time = now;
       component.ngOnChanges({ time: new SimpleChange(null, now, false) });
       fixture.detectChanges();
       expect(component.updateHands).toHaveBeenCalledWith(now);
+    });
+
+    it('should not call updateHands if time is not set', () => {
+      const now = new Date();
+      spyOn(component, 'updateHands');
+      component.time = null;
+      component.ngOnChanges({ other: new SimpleChange(null, now, false) });
+      fixture.detectChanges();
+      expect(component.updateHands).not.toHaveBeenCalled();
     });
   });
 });
