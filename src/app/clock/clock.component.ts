@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable, interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -11,11 +11,11 @@ const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
 })
 export class ClockComponent {
   /**
-   * sample output
-   */
-  readonly demo = DEMO;
-  /**
    * Current time to display
    */
   readonly now$: Observable<Date> = interval(1000).pipe(map(() => new Date()));
+  /**
+   * Demo usage
+   */
+  readonly demo = DEMO;
 }
