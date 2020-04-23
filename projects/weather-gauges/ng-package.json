@@ -6,7 +6,6 @@
     "languageLevel": [
       "dom",
       "es2017"
-    ],
-    "licensePath": "./LICENSE"
+    ]
   }
 }
