@@ -1,12 +1,16 @@
 os: linux
-dist: buster
+dist: bionic
 
 language: node_js
 node_js:
   - "12"
 
 addons:
-  chrome: stable
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 
 cache:
   directories:
@@ -17,7 +21,7 @@ install:
 
 script:
   # Use Chromium instead of Chrome.
-  - export CHROME_BIN=chromium-browser
+  # - export CHROME_BIN=chromium-browser
   # build library
   - npm run build -- weather-gauges
   - npm run build -- demo
