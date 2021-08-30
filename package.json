@@ -18,8 +18,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "ng build weather-gauges",
-    "deploy": "ng build demo --output-path docs --base-href /weather-gauges/"
+    "predeploy": "ng build -c production weather-gauges",
+    "deploy": "ng build demo -c production --output-path docs --base-href /weather-gauges/"
   },
   "dependencies": {
     "@angular/animations": "^9.1.13",

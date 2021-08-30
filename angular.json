@@ -35,6 +35,7 @@
                   "maximumWarning": "6kb"
                 }
               ],
+              "outputPath": "docs",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
