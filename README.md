@@ -2,7 +2,7 @@
 
 # Weather Gauges
 
-## https://weathergauges.njfiorello.com
+## https://melgish.github.io/weather-gauges/
 
 Some svg gauges relating to weather.  Built for Angular 9.
 
