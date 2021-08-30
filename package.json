@@ -10,14 +10,16 @@
     "svg",
     "gauges"
   ],
-  "homepage": "https://weathergauges.njfiorello.com",
+  "homepage": "https://melgish.github.io/weather-gauges/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "predeploy": "ng build weather-gauges",
+    "deploy": "ng build demo --output-path docs --base-href /weather-gauges/"
   },
   "dependencies": {
     "@angular/animations": "^9.1.13",

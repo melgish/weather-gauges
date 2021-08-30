@@ -9,7 +9,7 @@
     "svg",
     "gauges"
   ],
-  "homepage": "https://weathergauges.njfiorello.com",
+  "homepage": "https://melgish.github.io/weather-gauges/",
   "peerDependencies": {
     "@angular/common": ">=7.0.0",
     "@angular/core": ">=7.0.0"
