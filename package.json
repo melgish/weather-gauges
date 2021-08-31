@@ -18,8 +18,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "ng build -c production weather-gauges",
-    "deploy": "ng build demo -c production --output-path docs --base-href /weather-gauges/",
+    "deploy": "ng build -c production weather-gauges && ng build demo -c production --output-path docs --base-href /weather-gauges/ && cp docs/index.html docs/404.html",
     "version": "sync-json -v --property version --source package.json projects/weather-gauges/package.json"
   },
   "dependencies": {
