@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 // tslint:disable-next-line:no-implicit-dependencies
 import { By } from '@angular/platform-browser';
 import { DebugElement, SimpleChange } from '@angular/core';
@@ -11,12 +11,11 @@ describe('WindDialComponent', () => {
   let lcd0: DebugElement;
   let lcd1: DebugElement;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ WindDialComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [WindDialComponent],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(WindDialComponent);

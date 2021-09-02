@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MillibarsComponent } from './millibars.component';
 import { FormsModule } from '@angular/forms';
@@ -8,16 +8,12 @@ describe('MillibarsComponent', () => {
   let component: MillibarsComponent;
   let fixture: ComponentFixture<MillibarsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ MillibarsComponent ],
-      imports: [
-        FormsModule,
-        WeatherGaugesModule,
-      ]
-    })
-    .compileComponents();
-  }));
+      declarations: [MillibarsComponent],
+      imports: [FormsModule, WeatherGaugesModule],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MillibarsComponent);

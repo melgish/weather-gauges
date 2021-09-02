@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TempSqDialComponent } from './temp-sq-dial.component';
 import { SimpleChange } from '@angular/core';
@@ -7,12 +7,11 @@ describe('TempSqDialComponent', () => {
   let component: TempSqDialComponent;
   let fixture: ComponentFixture<TempSqDialComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ TempSqDialComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [TempSqDialComponent],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TempSqDialComponent);
@@ -48,4 +47,3 @@ describe('TempSqDialComponent', () => {
     expect(component.farenheit[3].text).toBe(60);
   });
 });
-

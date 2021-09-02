@@ -4,20 +4,15 @@ import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { ClockComponent } from './clock.component';
 import { By } from '@angular/platform-browser';
 
-
 describe('ClockComponent', () => {
   let component: ClockComponent;
   let fixture: ComponentFixture<ClockComponent>;
 
-  beforeEach(async done => {
+  beforeEach(async (done) => {
     await TestBed.configureTestingModule({
-      declarations: [ ClockComponent ],
-      imports: [
-        FormsModule,
-        WeatherGaugesModule
-      ]
-    })
-    .compileComponents();
+      declarations: [ClockComponent],
+      imports: [FormsModule, WeatherGaugesModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ClockComponent);
     component = fixture.componentInstance;

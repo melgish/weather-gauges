@@ -1,4 +1,5 @@
-
+// Don't require dependencies used to run unit tests
+// tslint:disable:no-implicit-dependencies
 import 'zone.js';
 import 'zone.js/testing';
 import { getTestBed } from '@angular/core/testing';

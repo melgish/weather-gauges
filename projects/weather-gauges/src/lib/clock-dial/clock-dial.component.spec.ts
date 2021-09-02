@@ -1,5 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ClockDialComponent } from './clock-dial.component';
 import { SimpleChange } from '@angular/core';
 
@@ -7,12 +6,11 @@ describe('ClockDialComponent', () => {
   let component: ClockDialComponent;
   let fixture: ComponentFixture<ClockDialComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ ClockDialComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [ClockDialComponent],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ClockDialComponent);
