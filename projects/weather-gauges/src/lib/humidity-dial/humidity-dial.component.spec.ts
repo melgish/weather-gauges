@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 // tslint:disable-next-line:no-implicit-dependencies
 import { By } from '@angular/platform-browser';
 import { DebugElement, SimpleChange } from '@angular/core';
@@ -10,12 +10,11 @@ describe('HumidityDialComponent', () => {
   let needle: DebugElement;
   let lcd: DebugElement;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ HumidityDialComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [HumidityDialComponent],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HumidityDialComponent);
@@ -24,7 +23,6 @@ describe('HumidityDialComponent', () => {
     lcd = fixture.debugElement.query(By.css('.lcd'));
 
     fixture.detectChanges();
-
   });
 
   it('should create', () => {

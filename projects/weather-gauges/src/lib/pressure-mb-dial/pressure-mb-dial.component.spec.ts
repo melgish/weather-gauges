@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement, SimpleChange } from '@angular/core';
 // tslint:disable-next-line:no-implicit-dependencies
 import { By } from '@angular/platform-browser';
@@ -11,12 +11,11 @@ describe('PressureMbDialComponent', () => {
   let blueNeedle: DebugElement;
   let lcd: DebugElement;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ PressureMbDialComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [PressureMbDialComponent],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PressureMbDialComponent);
@@ -33,7 +32,7 @@ describe('PressureMbDialComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should hide blue needle when there\'s no previous value', () => {
+  it('should hide blue needle when there is no previous value', () => {
     component.previous = false;
     fixture.detectChanges();
     expect(fixture.debugElement.query(By.css('.blue-needle'))).toBeNull();
@@ -84,5 +83,4 @@ describe('PressureMbDialComponent', () => {
     expect(component.rotCurrent).toBe('rotate(0)');
     expect(component.rotPrevious).toBe('rotate(0)');
   });
-
 });

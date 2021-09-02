@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { HumidityComponent } from './humidity.component';
@@ -7,16 +7,12 @@ describe('HumidityComponent', () => {
   let component: HumidityComponent;
   let fixture: ComponentFixture<HumidityComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ HumidityComponent ],
-      imports: [
-        FormsModule,
-        WeatherGaugesModule
-      ]
-    })
-    .compileComponents();
-  }));
+      declarations: [HumidityComponent],
+      imports: [FormsModule, WeatherGaugesModule],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HumidityComponent);

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { WindComponent } from './wind.component';
@@ -7,16 +7,12 @@ describe('WindComponent', () => {
   let component: WindComponent;
   let fixture: ComponentFixture<WindComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ WindComponent ],
-      imports: [
-        FormsModule,
-        WeatherGaugesModule
-      ]
-    })
-    .compileComponents();
-  }));
+      declarations: [WindComponent],
+      imports: [FormsModule, WeatherGaugesModule],
+    }).compileComponents()
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(WindComponent);
