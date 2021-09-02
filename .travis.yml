@@ -26,7 +26,7 @@ script:
   - npm run build -- weather-gauges
   - npm run build -- demo
   # test both library and demo page
-  - npm run test -- weather-gauges --watch=false --progress=false --browsers=Headless --reporters=kjhtml
-  - npm run test -- demo --watch=false --progress=false --browsers=Headless --reporters=kjhtml
+  - npm run test -- weather-gauges --watch=false --progress=false --browsers=ChromeHeadless --reporters=kjhtml
+  - npm run test -- demo --watch=false --progress=false --browsers=ChromeHeadless --reporters=kjhtml
   # run e2e tests
   # - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js

@@ -8,18 +8,18 @@ describe('ClockComponent', () => {
   let component: ClockComponent;
   let fixture: ComponentFixture<ClockComponent>;
 
-  beforeEach(async (done) => {
-    await TestBed.configureTestingModule({
+  beforeEach(async () =>
+    TestBed.configureTestingModule({
       declarations: [ClockComponent],
       imports: [FormsModule, WeatherGaugesModule],
-    }).compileComponents();
+    }).compileComponents()
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(ClockComponent);
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-
-    done();
   });
 
   it('should create', () => {
