@@ -1,7 +1,7 @@
 {
   "name": "@njfiorello/weather-gauges",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "MIT",
   "description": "Some svg gauges relating to weather.",
   "keywords": [
@@ -17,8 +17,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "ng build -c production weather-gauges && ng build demo -c production --output-path docs --base-href /weather-gauges/ && cp docs/index.html docs/404.html",
+    "deploy": "ng build -c production weather-gauges && ng build weather-gauges-docs -c production --output-path docs --base-href /weather-gauges/ && cp docs/index.html docs/404.html",
     "version": "sync-json -v --property version --source package.json projects/weather-gauges/package.json"
   },
   "dependencies": {
