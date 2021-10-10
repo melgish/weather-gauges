@@ -11,4 +11,9 @@ const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
 export class CelsiusComponent {
   @Input() celsius = Math.round(Math.random() * 100) - 30;
   demo = DEMO;
+
+  ngOnInit() {
+    window['xxx'] = this;
+    window['zzz'] = CelsiusComponent;
+  }
 }
