@@ -21,21 +21,6 @@
             }
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/weather-gauges/src/test.ts",
-            "tsConfig": "projects/weather-gauges/tsconfig.spec.json",
-            "karmaConfig": "projects/weather-gauges/karma.conf.js"
-          },
-          "configurations": {
-            "github": {
-              "browsers": "ChromiumHeadless",
-              "watch": false,
-              "codeCoverage": true
-            }
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -129,31 +114,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "weather-gauges-docs:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/weather-gauges-docs/src/test.ts",
-            "polyfills": "projects/weather-gauges-docs/src/polyfills.ts",
-            "tsConfig": "projects/weather-gauges-docs/tsconfig.spec.json",
-            "karmaConfig": "projects/weather-gauges-docs/karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/weather-gauges-docs/src/favicon.ico",
-              "projects/weather-gauges-docs/src/assets"
-            ],
-            "styles": [
-              "projects/weather-gauges-docs/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "github": {
-              "browsers": "ChromiumHeadless",
-              "watch": false,
-              "codeCoverage": true
-            }
           }
         }
       }
