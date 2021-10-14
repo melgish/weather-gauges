@@ -1,12 +1,13 @@
 import { Component, Input } from '@angular/core';
+import * as Prism from 'prismjs';
+import demo from './demo.html';
 
-// loading this via REQUIRE so prismjs will convert it
-const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
+// Trim and colorize the HTML with prismjs.
+const DEMO = Prism.highlight(demo.trim(), Prism.languages.markup, 'html');
 
 @Component({
   selector: 'app-humidity',
   templateUrl: './humidity.component.html',
-  // styleUrls: ['./humidity.component.scss']
 })
 export class HumidityComponent {
   /**
@@ -14,7 +15,7 @@ export class HumidityComponent {
    */
   @Input() humidity = Math.round(Math.random() * 100);
   /**
-   * Demo usage
+   * Sample HTML to display.
    */
-  demo = DEMO;
+  readonly demo = DEMO;
 }

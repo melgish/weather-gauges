@@ -2,18 +2,18 @@
   <div class="col-lg-4 col-md-4 col-sm-6 pr-2">
     <div class="card">
       <div class="card-body">
-        <wg-farenheit-dial [temperature]="farenheit"></wg-farenheit-dial>
+        <wg-fahrenheit-dial [temperature]="fahrenheit"></wg-fahrenheit-dial>
       </div>
       <div class="card-footer p-1">
         <label>Temperature</label>
-        <input class="w-100" type="range" min="-35" max="155" [(ngModel)]="farenheit">
+        <input class="w-100" type="range" min="-35" max="155" [(ngModel)]="fahrenheit">
       </div>
     </div>
   </div>
   <div class="col-lg-8 col-md-8 col-sm-6 pl-2">
     <div class="card">
       <div class="card-header">
-        <b>wg-farenheit-dial</b>
+        <b>wg-fahrenheit-dial</b>
       </div>
       <pre class="language-html card-body"><code class="language-html" [innerHTML]="demo"></code></pre>
       <div class="card-footer">Effective Range: -30&deg; to 150&deg; F</div>

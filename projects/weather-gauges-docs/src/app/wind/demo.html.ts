@@ -1,3 +1,4 @@
+export default `
 <div class="card">
   <div class="card-body">
     <wg-wind-dial [direction]="direction" [speed]="speed" [units]="units"></wg-wind-dial>
@@ -9,3 +10,4 @@
     <input class="w-100" type="range" min="0" max="140" [(ngModel)]="speed">
   </div>
 </div>
+`;

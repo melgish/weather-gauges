@@ -5,7 +5,7 @@ import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { CelsiusComponent } from './celsius/celsius.component';
-import { FarenheitComponent } from './farenheit/farenheit.component';
+import { FarenheitComponent } from './fahrenheit/farenheit.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { WindComponent } from './wind/wind.component';
 import { APP_BASE_HREF } from '@angular/common';

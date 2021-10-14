@@ -1,19 +1,21 @@
 import { Component, Input } from '@angular/core';
+import * as Prism from 'prismjs';
+import demo from './demo.html';
 
-// loading this via REQUIRE so prismjs will convert it
-const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
+// Trim and colorize the HTML with prismjs.
+const DEMO = Prism.highlight(demo.trim(), Prism.languages.markup, 'html');
 
 @Component({
   selector: 'app-celsius',
   templateUrl: './celsius.component.html',
-  // styleUrls: ['./celsius.component.scss']
 })
 export class CelsiusComponent {
+  /**
+   * Temperature to display on the dial.
+   */
   @Input() celsius = Math.round(Math.random() * 100) - 30;
-  demo = DEMO;
-
-  ngOnInit() {
-    window['xxx'] = this;
-    window['zzz'] = CelsiusComponent;
-  }
+  /**
+   * Sample HTML to display.
+   */
+  readonly demo = DEMO;
 }

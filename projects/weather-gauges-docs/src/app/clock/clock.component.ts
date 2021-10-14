@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Observable, interval } from 'rxjs';
 import { map } from 'rxjs/operators';
+import * as Prism from 'prismjs';
+import demo from './demo.html';
 
-// loading this via REQUIRE so prismjs will convert it at compile time.
-const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
+// Trim and colorize the HTML with prismjs.
+const DEMO = Prism.highlight(demo.trim(), Prism.languages.markup, 'html');
 
 @Component({
   selector: 'app-clock',
@@ -15,7 +17,7 @@ export class ClockComponent {
    */
   readonly now$: Observable<Date> = interval(1000).pipe(map(() => new Date()));
   /**
-   * Demo usage
+   * Sample HTML to display.
    */
   readonly demo = DEMO;
 }

@@ -1,15 +1,25 @@
 import { Component, Input } from '@angular/core';
+import * as Prism from 'prismjs';
+import demo from './demo.html';
 
-// loading this via REQUIRE so prismjs will convert it
-const DEMO = require('!!prismjs-loader?lang=markup!./demo.html');
+// Trim and colorize the HTML with prismjs.
+const DEMO = Prism.highlight(demo.trim(), Prism.languages.markup, 'html');
 
 @Component({
   selector: 'app-wind',
   templateUrl: './wind.component.html',
-  // styleUrls: ['./wind.component.scss']
 })
 export class WindComponent {
+  /**
+   * Direction wind is blowing from.
+   */
   @Input() direction = Math.round(Math.random() * 360);
+  /**
+   * Speed wind is blowing.
+   */
   @Input() speed = Math.round(Math.random() * 100);
-  demo = DEMO;
+  /**
+   * Sample HTML to display.
+   */
+  readonly demo = DEMO;
 }

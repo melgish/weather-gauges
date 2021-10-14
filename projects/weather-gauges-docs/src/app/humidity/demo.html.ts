@@ -1,3 +1,4 @@
+export default `
 <div class="card">
   <div class="card-body">
     <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
@@ -7,3 +8,4 @@
     <input class="w-100" type="range" min="-5" max="105" [(ngModel)]="humidity">
   </div>
 </div>
+`;

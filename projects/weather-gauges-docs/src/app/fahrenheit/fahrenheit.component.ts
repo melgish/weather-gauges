@@ -6,18 +6,14 @@ import demo from './demo.html';
 const DEMO = Prism.highlight(demo.trim(), Prism.languages.markup, 'html');
 
 @Component({
-  selector: 'app-millibars',
-  templateUrl: './millibars.component.html',
+  selector: 'app-farenheit',
+  templateUrl: './farenheit.component.html',
 })
-export class MillibarsComponent {
+export class FahrenheitComponent {
   /**
-   * Current pressure to display on dial.
+   * Temperature to display on dial
    */
-  @Input() current = Math.random() * 200 + 880;
-  /**
-   * Previous pressure to display on dial.
-   */
-  @Input() previous = Math.random() * 200 + 880;
+  @Input() fahrenheit = Math.round(Math.random() * 180) - 30;
   /**
    * Sample HTML to display.
    */

@@ -1,3 +1,4 @@
+export default `
 <div class="card">
   <div class="card-body">
     <wg-pressure-mb-dial [current]="current" [previous]="previous"></wg-pressure-mb-dial>
@@ -9,3 +10,4 @@
     <input class="w-100" type="range" min="880" max="1080" [(ngModel)]="previous">
   </div>
 </div>
+`;

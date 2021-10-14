@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CelsiusComponent } from './celsius/celsius.component';
-import { FarenheitComponent } from './farenheit/farenheit.component';
+import { FarenheitComponent } from './fahrenheit/farenheit.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { WindComponent } from './wind/wind.component';
 import { ClockComponent } from './clock/clock.component';
