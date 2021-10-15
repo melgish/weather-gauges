@@ -11,7 +11,7 @@ const F = [0, 1, 2, 3, 4, 5, 6];
 export class TempSqDialComponent implements OnChanges {
   @Input() temperature = 20;
   celsius = this.cscale();
-  farenheit = this.fscale();
+  fahrenheit = this.fscale();
 
   /**
    *
@@ -20,7 +20,7 @@ export class TempSqDialComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.temperature) {
       this.celsius = this.cscale();
-      this.farenheit = this.fscale();
+      this.fahrenheit = this.fscale();
     }
   }
 

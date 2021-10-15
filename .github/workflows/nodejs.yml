@@ -28,5 +28,5 @@ jobs:
         cache: 'npm'
     - run: npm ci
     # build the library to support testing the docs site.
-    - run: npm run --if-present build weather-gauges -- -c production
-    - run: npm test -- -c github
+    - run: npm run ci:build --if-present
+    - run: npm run ci:test --if-present

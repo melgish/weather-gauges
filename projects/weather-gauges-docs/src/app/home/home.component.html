@@ -1,0 +1,62 @@
+<div class="row pt-2 pb-2">
+  <div class="col">
+    <div class="card-deck">
+      <div class="card" routerLink="celsius">
+        <div class="card-header text-center">wg-celsius-dial</div>
+        <div class="card-body">
+          <wg-celsius-dial [temperature]="celsius"></wg-celsius-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="fahrenheit">
+        <div class="card-header text-center">wg-fahrenheit-dial</div>
+        <div class="card-body">
+          <wg-fahrenheit-dial [temperature]="fahrenheit"></wg-fahrenheit-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="humidity">
+        <div class="card-header text-center">wg-humidity-dial</div>
+        <div class="card-body">
+          <wg-humidity-dial [humidity]="humidity"></wg-humidity-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="wind">
+        <div class="card-header text-center">wg-wind-dial</div>
+        <div class="card-body">
+          <wg-wind-dial [direction]="45" [speed]="12.3" [units]="'MPH'"></wg-wind-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="clock">
+        <div class="card-header text-center">wg-clock-dial</div>
+        <div class="card-body">
+          <wg-clock-dial [time]="now$ | async"></wg-clock-dial>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row pt-2 pb-2">
+  <div class="col">
+    <div class="card-deck">
+      <div class="card" routerLink="inches">
+        <div class="card-header text-center">wg-pressure-in-dial</div>
+        <div class="card-body">
+          <wg-pressure-in-dial [current]="currentInches" [previous]="previousInches"></wg-pressure-in-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="millibars">
+        <div class="card-header text-center">wg-pressure-mb-dial</div>
+        <div class="card-body">
+          <wg-pressure-mb-dial [current]="currentMillibars" [previous]="previousMillibars"></wg-pressure-mb-dial>
+        </div>
+      </div>
+      <div class="card" routerLink="temperature">
+        <div class="card-header text-center">wg-temp-sq-dial</div>
+        <div class="card-body">
+          <wg-temp-sq-dial [temperature]="celsius"></wg-temp-sq-dial>
+        </div>
+      </div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+  </div>
+</div>

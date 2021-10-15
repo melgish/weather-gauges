@@ -22,9 +22,6 @@
     "paths": {
       "@njfiorello/weather-gauges": [
         "dist/weather-gauges"
-      ],
-      "@njfiorello/weather-gauges/*": [
-        "dist/weather-gauges/*"
       ]
     }
   }
