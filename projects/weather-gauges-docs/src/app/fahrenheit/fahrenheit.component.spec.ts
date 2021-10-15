@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { FahrenheitComponent } from './fahrenheit.component';
 
-describe('FarenheitComponent', () => {
+describe('FahrenheitComponent', () => {
   let component: FahrenheitComponent;
   let fixture: ComponentFixture<FahrenheitComponent>;
 

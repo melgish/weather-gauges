@@ -6,8 +6,8 @@ import demo from './demo.html';
 const DEMO = Prism.highlight(demo.trim(), Prism.languages.markup, 'html');
 
 @Component({
-  selector: 'app-farenheit',
-  templateUrl: './farenheit.component.html',
+  selector: 'app-fahrenheit',
+  templateUrl: './fahrenheit.component.html',
 })
 export class FahrenheitComponent {
   /**

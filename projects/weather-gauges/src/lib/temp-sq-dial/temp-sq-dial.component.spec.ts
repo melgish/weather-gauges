@@ -28,22 +28,22 @@ describe('TempSqDialComponent', () => {
     component.ngOnChanges({ temperature: new SimpleChange(20, 37, false) });
     fixture.detectChanges();
     expect(component.celsius[3].text).toBe(35);
-    expect(component.farenheit[3].text).toBe(90);
+    expect(component.fahrenheit[3].text).toBe(90);
     component.temperature = 20;
     component.ngOnChanges({ temperature: new SimpleChange(37, 20, false) });
     fixture.detectChanges();
     expect(component.celsius[3].text).toBe(20);
-    expect(component.farenheit[3].text).toBe(60);
+    expect(component.fahrenheit[3].text).toBe(60);
   });
 
   it('should not update temperature for other changes', () => {
     component.temperature = 20;
     fixture.detectChanges();
     expect(component.celsius[3].text).toBe(20);
-    expect(component.farenheit[3].text).toBe(60);
+    expect(component.fahrenheit[3].text).toBe(60);
     component.ngOnChanges({ somethingElse: new SimpleChange(37, 20, false) });
     fixture.detectChanges();
     expect(component.celsius[3].text).toBe(20);
-    expect(component.farenheit[3].text).toBe(60);
+    expect(component.fahrenheit[3].text).toBe(60);
   });
 });

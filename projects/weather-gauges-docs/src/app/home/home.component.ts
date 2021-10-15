@@ -18,7 +18,7 @@ export class HomeComponent {
 
   // randomize the values
   celsius = Math.random() * 100 - 25;
-  farenheit = this.celsius * 9 / 5 + 32;
+  fahrenheit = this.celsius * 9 / 5 + 32;
   // mb = in / 0.029530
   currentInches = Math.random() * 6 + 26;
   currentMillibars = this.currentInches / 0.029530;

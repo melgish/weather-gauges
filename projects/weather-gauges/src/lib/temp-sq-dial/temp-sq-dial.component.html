@@ -67,7 +67,7 @@
         </ng-container>
       </g>
       <g text-anchor="start">
-        <ng-container *ngFor="let f of farenheit">
+        <ng-container *ngFor="let f of fahrenheit">
           <g attr.transform="translate(0, {{f.shift}})">
             <use href="#temp-sq-deg-f" y="12.5" />
             <text x="12">{{ f.text | number: '2.0-0'}}</text>

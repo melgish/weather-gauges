@@ -7,7 +7,7 @@ import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CelsiusComponent } from './celsius/celsius.component';
-import { FarenheitComponent } from './fahrenheit/farenheit.component';
+import { FahrenheitComponent } from './fahrenheit/fahrenheit.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { WindComponent } from './wind/wind.component';
 import { ClockComponent } from './clock/clock.component';
@@ -20,7 +20,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
     AppComponent,
     HomeComponent,
     CelsiusComponent,
-    FarenheitComponent,
+    FahrenheitComponent,
     HumidityComponent,
     WindComponent,
     ClockComponent,
