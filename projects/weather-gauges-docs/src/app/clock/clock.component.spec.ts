@@ -8,6 +8,9 @@ describe('ClockComponent', () => {
   let component: ClockComponent;
   let fixture: ComponentFixture<ClockComponent>;
 
+  beforeEach(() => jest.useFakeTimers());
+  afterEach(() => jest.useRealTimers());
+
   beforeEach(async () =>
     TestBed.configureTestingModule({
       declarations: [ClockComponent],
@@ -23,8 +26,9 @@ describe('ClockComponent', () => {
   });
 
   it('should create', () => {
+     jest.advanceTimersToNextTimer();
     expect(component).toBeTruthy();
-  });
+   });
 
   it('should display the wg-clock-dial component', () => {
     const dial = fixture.debugElement.query(By.css('wg-clock-dial'));
@@ -35,4 +39,6 @@ describe('ClockComponent', () => {
     const pre = fixture.debugElement.query(By.css('pre'));
     expect(pre).toBeDefined();
   });
+
+
 });

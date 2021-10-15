@@ -67,6 +67,8 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "docs",
+              "baseHref": "/weather-gauges/",
               "budgets": [
                 {
                   "type": "initial",

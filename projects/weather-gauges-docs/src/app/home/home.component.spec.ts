@@ -7,6 +7,9 @@ describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
+  beforeEach(() => jest.useFakeTimers());
+  afterEach(() => jest.useRealTimers());
+
   beforeEach(() =>
     TestBed.configureTestingModule({
       declarations: [HomeComponent],
@@ -22,6 +25,7 @@ describe('HomeComponent', () => {
   });
 
   it('should create', () => {
+    jest.advanceTimersToNextTimer();
     expect(component).toBeTruthy();
   });
 });

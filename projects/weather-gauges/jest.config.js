@@ -1,5 +1,4 @@
-const config = require("../../jest.base.config");
-
-module.exports =  {
-  ...config
-}
+module.exports = {
+  preset: 'jest-preset-angular',
+  setupFilesAfterEnv: ['../../jest.setup.js']
+};
