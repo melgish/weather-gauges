@@ -1,11 +1,10 @@
 import { Component, OnChanges, Input, SimpleChange } from '@angular/core';
 
 @Component({
-  selector: 'wg-farenheit-dial',
-  templateUrl: './farenheit-dial.component.html',
-  // styleUrls: ['./farenheit-dial.component.scss']
+  selector: 'wg-fahrenheit-dial',
+  templateUrl: './fahrenheit-dial.component.html',
 })
-export class FarenheitDialComponent implements OnChanges {
+export class FahrenheitDialComponent implements OnChanges {
   @Input() temperature = 60;
   rotate = 'rotate(0)';
 
@@ -23,3 +22,12 @@ export class FarenheitDialComponent implements OnChanges {
     }
   }
 }
+
+/**
+ * @deprecated Use FahrenheitDialComponent
+ */
+@Component({
+  selector: 'wg-farenheit-dial',
+  templateUrl: './fahrenheit-dial.component.html',
+})
+export class FarenheitDialComponent extends FahrenheitDialComponent {}

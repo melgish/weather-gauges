@@ -2,22 +2,22 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SimpleChange, DebugElement } from '@angular/core';
 // tslint:disable-next-line:no-implicit-dependencies
 import { By } from '@angular/platform-browser';
-import { FarenheitDialComponent } from './farenheit-dial.component';
+import { FahrenheitDialComponent } from './fahrenheit-dial.component';
 
-describe('FarenheitDialComponent', () => {
-  let component: FarenheitDialComponent;
-  let fixture: ComponentFixture<FarenheitDialComponent>;
+describe('FahrenheitDialComponent', () => {
+  let component: FahrenheitDialComponent;
+  let fixture: ComponentFixture<FahrenheitDialComponent>;
   let needle: DebugElement;
   let lcd: DebugElement;
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [FarenheitDialComponent],
+      declarations: [FahrenheitDialComponent],
     }).compileComponents()
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FarenheitDialComponent);
+    fixture = TestBed.createComponent(FahrenheitDialComponent);
     component = fixture.componentInstance;
     needle = fixture.debugElement.query(By.css('.needle'));
     lcd = fixture.debugElement.query(By.css('.lcd'));
