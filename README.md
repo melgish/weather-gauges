@@ -1,7 +1,8 @@
-![travis](https://travis-ci.org/melgish/weather-gauges.svg?branch=main)
-
 # Weather Gauges
-
+[![main](https://github.com/melgish/weather-gauges/actions/workflows/nodejs.yml/badge.svg)](https://github.com/melgish/weather-gauges/actions/workflows/nodejs.yml)
+![GitHub last commit](https://img.shields.io/github/last-commit/melgish/weather-gauges)
+[![codecov](https://codecov.io/gh/melgish/weather-gauges/branch/main/graph/badge.svg?token=9NK6RD8NV7)](https://codecov.io/gh/melgish/weather-gauges)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ## https://melgish.github.io/weather-gauges/
 
 Some svg gauges relating to weather.  Built for Angular 12.
