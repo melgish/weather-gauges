@@ -21,7 +21,8 @@
     "build:lib": "ng build -c production weather-gauges",
     "build:docs": "ng build -c production weather-gauges-docs && cp docs/index.html docs/404.html",
     "ci:build": "npm run build",
-    "ci:test": "jest --coverage"
+    "ci:test": "jest --ci --coverage",
+    "jest": "jest"
   },
   "dependencies": {
     "@angular/animations": "^12.2.10",
