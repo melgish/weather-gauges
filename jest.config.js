@@ -21,5 +21,7 @@ module.exports = {
     "html",
     // for Jenkins statistics
     "cobertura",
+    // for Sonarqube analysis
+    "lcovonly"
   ]
 };
