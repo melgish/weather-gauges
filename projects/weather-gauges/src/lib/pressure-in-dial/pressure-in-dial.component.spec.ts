@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement, SimpleChange } from '@angular/core';
-// tslint:disable-next-line:no-implicit-dependencies
 import { By } from '@angular/platform-browser';
 import { PressureInDialComponent } from './pressure-in-dial.component';
 

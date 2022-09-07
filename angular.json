@@ -22,13 +22,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/weather-gauges/tsconfig.lib.json",
-              "projects/weather-gauges/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/weather-gauges/**/*.ts",
+              "projects/weather-gauges/**/*.html"
+            ]
           }
         }
       }
@@ -117,6 +116,15 @@
           "options": {
             "browserTarget": "weather-gauges-docs:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/weather-gauges-docs/**/*.ts",
+              "projects/weather-gauges-docs/**/*.html"
+            ]
+          }
         }
       }
     }
@@ -130,5 +138,8 @@
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
