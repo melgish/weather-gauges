@@ -1,7 +1,7 @@
 {
   "name": "@njfiorello/weather-gauges",
   "private": true,
-  "version": "0.4.1",
+  "version": "0.5.0",
   "license": "MIT",
   "description": "Some svg gauges relating to weather.",
   "keywords": [

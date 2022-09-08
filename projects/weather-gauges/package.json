@@ -1,6 +1,6 @@
 {
   "name": "@njfiorello/weather-gauges",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "license": "MIT",
   "description": "Some svg gauges relating to weather.",
   "keywords": [
@@ -11,10 +11,10 @@
   ],
   "homepage": "https://melgish.github.io/weather-gauges/",
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.4.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=13.0.0",
-    "@angular/core": ">=13.0.0"
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0"
   }
 }
