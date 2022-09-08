@@ -3,7 +3,6 @@
   "compilerOptions": {
     "outDir": "../../out-tsc/spec",
     "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
     "types": [
       "node",
       "jest"

@@ -129,7 +129,6 @@
       }
     }
   },
-  "defaultProject": "weather-gauges",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
@@ -140,6 +139,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

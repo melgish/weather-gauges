@@ -25,18 +25,19 @@
           <wg-wind-dial [direction]="45" [speed]="12.3" [units]="'MPH'"></wg-wind-dial>
         </div>
       </div>
-      <div class="card" routerLink="clock">
-        <div class="card-header text-center">wg-clock-dial</div>
-        <div class="card-body">
-          <wg-clock-dial [time]="now$ | async"></wg-clock-dial>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 <div class="row pt-2 pb-2">
   <div class="col">
     <div class="card-deck">
+      <div class="card"
+           routerLink="clock">
+        <div class="card-header text-center">wg-clock-dial</div>
+        <div class="card-body">
+          <wg-clock-dial [time]="now$ | async"></wg-clock-dial>
+        </div>
+      </div>
       <div class="card" routerLink="inches">
         <div class="card-header text-center">wg-pressure-in-dial</div>
         <div class="card-body">
@@ -55,8 +56,6 @@
           <wg-temp-sq-dial [temperature]="celsius"></wg-temp-sq-dial>
         </div>
       </div>
-      <div class="card"></div>
-      <div class="card"></div>
     </div>
   </div>
 </div>
