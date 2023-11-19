@@ -5,8 +5,7 @@ const F = [0, 1, 2, 3, 4, 5, 6];
 
 @Component({
   selector: 'wg-temp-sq-dial',
-  templateUrl: './temp-sq-dial.component.html',
-  styleUrls: ['./temp-sq-dial.component.scss']
+  templateUrl: './temp-sq-dial.component.html'
 })
 export class TempSqDialComponent implements OnChanges {
   @Input() temperature = 20;
