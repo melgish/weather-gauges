@@ -2,8 +2,7 @@
 module.exports = {
   projects: [
     "projects/weather-gauges",
-    // fix later
-    // "projects/weather-gauges-docs"
+    "projects/weather-gauges-docs"
   ],
 
   reporters: [
