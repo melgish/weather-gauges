@@ -70,5 +70,10 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/melgish/weather-gauges.git"
+  },
+  "overrides": {
+    "sync-json": {
+      "yargs-parser": "21.1.1"
+    }
   }
 }
