@@ -72,7 +72,7 @@
   },
   "overrides": {
     "sync-json": {
-      "yargs-parser": "21.1.1"
+      "yargs": "17.7.2"
     }
   }
 }
