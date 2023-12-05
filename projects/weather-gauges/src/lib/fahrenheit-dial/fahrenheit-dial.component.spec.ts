@@ -29,7 +29,7 @@ describe('FahrenheitDialComponent', () => {
     expect(component.temperature).toBe(60);
     expect(component.rotate).toBe('rotate(0)');
 
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd.nativeElement.textContent).toMatch(/60.*F/);
   });
 
@@ -39,7 +39,7 @@ describe('FahrenheitDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotate).toBe('rotate(21)');
-    expect(needle.attributes['transform']).toBe('rotate(21)');
+    expect(needle.attributes.transform).toBe('rotate(21)');
     expect(lcd.nativeElement.textContent).toMatch(/75.*F/);
 
     component.temperature = 60;
@@ -47,7 +47,7 @@ describe('FahrenheitDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotate).toBe('rotate(0)');
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd.nativeElement.textContent).toMatch(/60.*F/);
   });
 

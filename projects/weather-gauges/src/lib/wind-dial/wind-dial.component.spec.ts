@@ -31,7 +31,7 @@ describe('WindDialComponent', () => {
     expect(component.direction).toBe(0);
     expect(component.speed).toBe(0);
     expect(component.rotate).toBe('rotate(0)');
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd0.nativeElement.textContent).toMatch(/0\.0/);
     expect(lcd1.nativeElement.textContent).toMatch(/0\.0/);
   });
@@ -47,14 +47,14 @@ describe('WindDialComponent', () => {
     component.ngOnChanges({ direction: new SimpleChange(0, 37, false) });
     fixture.detectChanges();
     expect(component.rotate).toBe('rotate(37)');
-    expect(needle.attributes['transform']).toBe('rotate(37)');
+    expect(needle.attributes.transform).toBe('rotate(37)');
     expect(lcd0.nativeElement.textContent).toMatch(/37\.0/);
 
     component.direction = 0;
     component.ngOnChanges({ direction: new SimpleChange(37, 0, false) });
     fixture.detectChanges();
     expect(component.rotate).toBe('rotate(0)');
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd0.nativeElement.textContent).toMatch(/0\.0/);
   });
 
@@ -65,7 +65,7 @@ describe('WindDialComponent', () => {
     component.ngOnChanges({ somethingElse: new SimpleChange(75, 60, false) });
     fixture.detectChanges();
     expect(component.rotate).toBe('rotate(50)');
-    expect(needle.attributes['transform']).toBe('rotate(50)');
+    expect(needle.attributes.transform).toBe('rotate(50)');
     expect(lcd0.nativeElement.textContent).toMatch(/50\.0/);
   });
 });

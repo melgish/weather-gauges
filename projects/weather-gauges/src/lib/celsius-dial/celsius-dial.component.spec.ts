@@ -31,7 +31,7 @@ describe('CelsiusDialComponent', () => {
     expect(component.temperature).toBe(20);
     expect(component.rotate).toBe('rotate(0)');
 
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd.nativeElement.textContent).toMatch(/20.*C/);
   });
 
@@ -41,7 +41,7 @@ describe('CelsiusDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotate).toBe('rotate(34)');
-    expect(needle.attributes['transform']).toBe('rotate(34)');
+    expect(needle.attributes.transform).toBe('rotate(34)');
     expect(lcd.nativeElement.textContent).toMatch(/37.*C/);
 
     component.temperature = 20;
@@ -49,7 +49,7 @@ describe('CelsiusDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotate).toBe('rotate(0)');
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd.nativeElement.textContent).toMatch(/20.*C/);
   });
 
