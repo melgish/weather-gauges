@@ -1,7 +1,7 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
-const C = [0, 1, 2, 3, 4, 5, 6];
-const F = [0, 1, 2, 3, 4, 5, 6];
+const T = [0, 1, 2, 3, 4, 5, 6];
+
 
 @Component({
   selector: 'wg-temp-sq-dial',
@@ -29,7 +29,7 @@ export class TempSqDialComponent implements OnChanges {
   cscale() {
     const m = (this.temperature % 5) * 4.5;
     const t = Math.floor(this.temperature / 5);
-    return C.map(c => ({
+    return T.map(c => ({
       shift: 22.5 * (c - 3) - m,
       text: (t + (c - 3)) * 5
     }));
@@ -42,7 +42,7 @@ export class TempSqDialComponent implements OnChanges {
     const tf = this.temperature * 1.8 + 32;
     const t = Math.floor(tf / 10);
     const m = (tf % 10) * 2.5;
-    return F.map(f => ({
+    return T.map(f => ({
       shift: (25 * (f - 3)) - m,
       text: (t + (f - 3)) * 10
     }));

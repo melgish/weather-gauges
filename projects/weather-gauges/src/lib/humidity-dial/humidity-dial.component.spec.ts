@@ -29,7 +29,7 @@ describe('HumidityDialComponent', () => {
     expect(component.humidity).toBe(50);
     expect(component.rotate).toBe('rotate(0)');
 
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd.nativeElement.textContent).toMatch(/50.*%/);
   });
 
@@ -39,7 +39,7 @@ describe('HumidityDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotate).toBe('rotate(-26)');
-    expect(needle.attributes['transform']).toBe('rotate(-26)');
+    expect(needle.attributes.transform).toBe('rotate(-26)');
     expect(lcd.nativeElement.textContent).toMatch(/37.*%/);
 
     component.humidity = 50;
@@ -47,7 +47,7 @@ describe('HumidityDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotate).toBe('rotate(0)');
-    expect(needle.attributes['transform']).toBe('rotate(0)');
+    expect(needle.attributes.transform).toBe('rotate(0)');
     expect(lcd.nativeElement.textContent).toMatch(/50.*%/);
   });
 

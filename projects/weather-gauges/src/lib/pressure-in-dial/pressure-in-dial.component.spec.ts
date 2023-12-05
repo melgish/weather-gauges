@@ -43,7 +43,7 @@ describe('PressureInDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotCurrent).toBe('rotate(0)');
-    expect(redNeedle.attributes['transform']).toBe('rotate(0)');
+    expect(redNeedle.attributes.transform).toBe('rotate(0)');
     expect(lcd.nativeElement.textContent).toBe('26.00 in');
 
     component.current = 29;
@@ -51,7 +51,7 @@ describe('PressureInDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotCurrent).toBe('rotate(-90)');
-    expect(redNeedle.attributes['transform']).toBe('rotate(-90)');
+    expect(redNeedle.attributes.transform).toBe('rotate(-90)');
     expect(lcd.nativeElement.textContent).toBe('29.00 in');
   });
 
@@ -61,14 +61,14 @@ describe('PressureInDialComponent', () => {
     fixture.detectChanges();
 
     expect(component.rotPrevious).toBe('rotate(0)');
-    expect(blueNeedle.attributes['transform']).toBe('rotate(0)');
+    expect(blueNeedle.attributes.transform).toBe('rotate(0)');
 
     component.previous = 26;
     component.ngOnChanges({ previous: new SimpleChange(29, 26, false) });
     fixture.detectChanges();
 
     expect(component.rotPrevious).toBe('rotate(-90)');
-    expect(blueNeedle.attributes['transform']).toBe('rotate(-90)');
+    expect(blueNeedle.attributes.transform).toBe('rotate(-90)');
   });
 
   it('should not update for other changes', () => {

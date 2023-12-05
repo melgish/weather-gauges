@@ -1,9 +1,8 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'wg-clock-dial',
-  templateUrl: './clock-dial.component.html',
-  // styleUrls: ['./clock-dial.component.scss']
+  templateUrl: './clock-dial.component.html'
 })
 export class ClockDialComponent implements OnChanges {
   @Input() time = new Date();
@@ -39,9 +38,9 @@ export class ClockDialComponent implements OnChanges {
   /**
    * Called by angular on update to input
    * @ignore
-   * @param changes angular changes
+   * @param _changes angular changes
    */
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(_changes: SimpleChanges): void {
     // using async pipe resulted in null...
     if (this.time) {
       this.updateHands(this.time);
