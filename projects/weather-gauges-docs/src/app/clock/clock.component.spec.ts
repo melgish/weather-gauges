@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { ClockComponent } from './clock.component';
 import { By } from '@angular/platform-browser';
+import { MockHighlightPipe } from '../highlight/highlight.pipe.mock';
 
 describe('ClockComponent', () => {
   let component: ClockComponent;
@@ -13,7 +14,7 @@ describe('ClockComponent', () => {
 
   beforeEach(async () =>
     TestBed.configureTestingModule({
-      declarations: [ClockComponent],
+      declarations: [ClockComponent, MockHighlightPipe],
       imports: [FormsModule, WeatherGaugesModule],
     }).compileComponents()
   );

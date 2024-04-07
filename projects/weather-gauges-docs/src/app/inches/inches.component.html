@@ -13,11 +13,11 @@
     </div>
   </div>
   <div class="col-lg-8 col-md-8 col-sm-6 pl-2">
-    <div class="card">
+    <div class="card demo">
       <div class="card-header">
         <b>wg-pressure-in-dial</b>
       </div>
-      <pre class="language-html card-body"><code class="language-html" [innerHTML]="demo"></code></pre>
+      <div class="card-body" [innerHTML]="demo|highlight|async"></div>
       <div class="card-footer">
         Effective Range: 25 to 33 inHg<br>
         [previous] is optional and if falsy, will hide blue needle
