@@ -1,3 +1,9 @@
+.card-deck {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
 .card-body svg {
   max-height: 300px;
 }

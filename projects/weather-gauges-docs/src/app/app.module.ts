@@ -14,6 +14,7 @@ import { ClockComponent } from './clock/clock.component';
 import { InchesComponent } from './inches/inches.component';
 import { MillibarsComponent } from './millibars/millibars.component';
 import { TemperatureComponent } from './temperature/temperature.component';
+import { HighlightPipe } from './highlight/highlight.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
     InchesComponent,
     MillibarsComponent,
     TemperatureComponent,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,
