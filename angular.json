@@ -103,10 +103,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "weather-gauges-docs:build:production"
+              "buildTarget": "weather-gauges-docs:build:production"
             },
             "development": {
-              "browserTarget": "weather-gauges-docs:build:development"
+              "buildTarget": "weather-gauges-docs:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -114,7 +114,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "weather-gauges-docs:build"
+            "buildTarget": "weather-gauges-docs:build"
           }
         },
         "lint": {
