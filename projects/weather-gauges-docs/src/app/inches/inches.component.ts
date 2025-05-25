@@ -1,10 +1,19 @@
 import { Component, Input } from '@angular/core';
 import demo from './demo.html';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HighlightPipe } from '../highlight/highlight.pipe';
+import { PressureInDialComponent } from '@njfiorello/weather-gauges';
 
 @Component({
-    selector: 'app-inches',
-    templateUrl: './inches.component.html',
-    standalone: false
+  imports: [
+    CommonModule,
+    FormsModule,
+    HighlightPipe,
+    PressureInDialComponent
+  ],
+  selector: 'app-inches',
+  templateUrl: './inches.component.html'
 })
 export class InchesComponent {
   /**

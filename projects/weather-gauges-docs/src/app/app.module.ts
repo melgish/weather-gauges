@@ -1,41 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
-import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
-import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
+
+import { BrowserModule } from '@angular/platform-browser';
 import { CelsiusComponent } from './celsius/celsius.component';
-import { FahrenheitComponent } from './fahrenheit/fahrenheit.component';
-import { HumidityComponent } from './humidity/humidity.component';
-import { WindComponent } from './wind/wind.component';
 import { ClockComponent } from './clock/clock.component';
+import { FahrenheitComponent } from './fahrenheit/fahrenheit.component';
+import { HighlightPipe } from './highlight/highlight.pipe';
+import { HomeComponent } from './home/home.component';
+import { HumidityComponent } from './humidity/humidity.component';
 import { InchesComponent } from './inches/inches.component';
 import { MillibarsComponent } from './millibars/millibars.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgModule } from '@angular/core';
 import { TemperatureComponent } from './temperature/temperature.component';
-import { HighlightPipeModule } from './highlight/highlight.pipe.module';
+import { WindComponent } from './wind/wind.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    CelsiusComponent,
-    FahrenheitComponent,
-    HumidityComponent,
-    WindComponent,
-    ClockComponent,
-    InchesComponent,
-    MillibarsComponent,
-    TemperatureComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
+    CelsiusComponent,
+    ClockComponent,
+    FahrenheitComponent,
+    HighlightPipe,
+    HomeComponent,
+    HumidityComponent,
+    InchesComponent,
     NgbDropdownModule,
-    WeatherGaugesModule,
-    HighlightPipeModule,
+    MillibarsComponent,
+    TemperatureComponent,
+    WindComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

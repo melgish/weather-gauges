@@ -1,37 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
-import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './home/home.component';
-import { CelsiusComponent } from './celsius/celsius.component';
-import { FahrenheitComponent } from './fahrenheit/fahrenheit.component';
-import { HumidityComponent } from './humidity/humidity.component';
-import { WindComponent } from './wind/wind.component';
 import { APP_BASE_HREF } from '@angular/common';
-import { ClockComponent } from './clock/clock.component';
-import { InchesComponent } from './inches/inches.component';
-import { MillibarsComponent } from './millibars/millibars.component';
-import { TemperatureComponent } from './temperature/temperature.component';
-import { MockHighlightPipeModule } from './highlight/mock-highlight.pipe.module';
+import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        HomeComponent,
-        CelsiusComponent,
-        FahrenheitComponent,
-        HumidityComponent,
-        WindComponent,
-        ClockComponent,
-        InchesComponent,
-        MillibarsComponent,
-        TemperatureComponent,
-      ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-      imports: [FormsModule, MockHighlightPipeModule, WeatherGaugesModule, AppRoutingModule],
+      imports: [AppModule],
     }).compileComponents()
   );
 

@@ -1,9 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { ClockComponent } from './clock.component';
 import { By } from '@angular/platform-browser';
-import { MockHighlightPipeModule } from '../highlight/mock-highlight.pipe.module';
+
 
 describe('ClockComponent', () => {
   let component: ClockComponent;
@@ -14,8 +12,7 @@ describe('ClockComponent', () => {
 
   beforeEach(async () =>
     TestBed.configureTestingModule({
-      declarations: [ClockComponent],
-      imports: [FormsModule, WeatherGaugesModule, MockHighlightPipeModule],
+      imports: [ClockComponent],
     }).compileComponents()
   );
 
