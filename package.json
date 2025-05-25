@@ -15,7 +15,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "npm run build:lib && npm run build:docs",
-    "test": "jest -c projects/weather-gauges/jest.config.js",
+    "test": "jest -c projects/weather-gauges/jest.config.ts",
     "lint": "ng lint",
     "version": "sync-json -v --property version --source package.json projects/weather-gauges/package.json",
     "build:lib": "ng build -c production weather-gauges",
