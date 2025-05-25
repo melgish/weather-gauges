@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import demo from './demo.html';
 
 @Component({
-  selector: 'app-humidity',
-  templateUrl: './humidity.component.html',
+    selector: 'app-humidity',
+    templateUrl: './humidity.component.html',
+    standalone: false
 })
 export class HumidityComponent {
   /**

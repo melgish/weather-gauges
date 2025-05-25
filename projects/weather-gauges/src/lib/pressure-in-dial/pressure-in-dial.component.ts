@@ -1,8 +1,9 @@
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'wg-pressure-in-dial',
-  templateUrl: './pressure-in-dial.component.html',
+    selector: 'wg-pressure-in-dial',
+    templateUrl: './pressure-in-dial.component.html',
+    standalone: false
 })
 export class PressureInDialComponent implements OnChanges {
   @Input() current = 29;

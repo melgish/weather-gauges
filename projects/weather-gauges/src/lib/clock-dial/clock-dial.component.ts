@@ -1,8 +1,9 @@
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'wg-clock-dial',
-  templateUrl: './clock-dial.component.html'
+    selector: 'wg-clock-dial',
+    templateUrl: './clock-dial.component.html',
+    standalone: false
 })
 export class ClockDialComponent implements OnChanges {
   @Input() time = new Date();

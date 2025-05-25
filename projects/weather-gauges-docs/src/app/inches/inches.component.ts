@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import demo from './demo.html';
 
 @Component({
-  selector: 'app-inches',
-  templateUrl: './inches.component.html',
+    selector: 'app-inches',
+    templateUrl: './inches.component.html',
+    standalone: false
 })
 export class InchesComponent {
   /**

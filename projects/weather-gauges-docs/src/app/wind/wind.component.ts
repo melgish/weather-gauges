@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import demo from './demo.html';
 
 @Component({
-  selector: 'app-wind',
-  templateUrl: './wind.component.html',
+    selector: 'app-wind',
+    templateUrl: './wind.component.html',
+    standalone: false
 })
 export class WindComponent {
   /**

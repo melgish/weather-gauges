@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import demo from './demo.html';
 
 @Component({
-  selector: 'app-fahrenheit',
-  templateUrl: './fahrenheit.component.html',
+    selector: 'app-fahrenheit',
+    templateUrl: './fahrenheit.component.html',
+    standalone: false
 })
 export class FahrenheitComponent {
   /**

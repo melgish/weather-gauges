@@ -1,8 +1,9 @@
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'wg-pressure-mb-dial',
-  templateUrl: './pressure-mb-dial.component.html',
+    selector: 'wg-pressure-mb-dial',
+    templateUrl: './pressure-mb-dial.component.html',
+    standalone: false
 })
 export class PressureMbDialComponent implements OnChanges {
   @Input() current = 980;

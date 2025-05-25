@@ -4,8 +4,9 @@ import { map } from 'rxjs/operators';
 import demo from './demo.html';
 
 @Component({
-  selector: 'app-clock',
-  templateUrl: './clock.component.html',
+    selector: 'app-clock',
+    templateUrl: './clock.component.html',
+    standalone: false
 })
 export class ClockComponent {
   /**

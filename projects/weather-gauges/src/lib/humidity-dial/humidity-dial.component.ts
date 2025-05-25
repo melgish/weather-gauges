@@ -1,8 +1,9 @@
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'wg-humidity-dial',
-  templateUrl: './humidity-dial.component.html'
+    selector: 'wg-humidity-dial',
+    templateUrl: './humidity-dial.component.html',
+    standalone: false
 })
 export class HumidityDialComponent implements OnChanges {
   @Input() humidity = 50;

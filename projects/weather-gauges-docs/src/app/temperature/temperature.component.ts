@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import demo from './demo.html';
 
 @Component({
-  selector: 'app-temperature',
-  templateUrl: './temperature.component.html',
+    selector: 'app-temperature',
+    templateUrl: './temperature.component.html',
+    standalone: false
 })
 export class TemperatureComponent {
   /**

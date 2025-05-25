@@ -1,8 +1,9 @@
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'wg-celsius-dial',
-  templateUrl: './celsius-dial.component.html'
+    selector: 'wg-celsius-dial',
+    templateUrl: './celsius-dial.component.html',
+    standalone: false
 })
 export class CelsiusDialComponent implements OnChanges {
   @Input() temperature = 20;

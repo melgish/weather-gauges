@@ -1,8 +1,9 @@
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'wg-wind-dial',
-  templateUrl: './wind-dial.component.html'
+    selector: 'wg-wind-dial',
+    templateUrl: './wind-dial.component.html',
+    standalone: false
 })
 export class WindDialComponent implements OnChanges {
   @Input() direction = 0;

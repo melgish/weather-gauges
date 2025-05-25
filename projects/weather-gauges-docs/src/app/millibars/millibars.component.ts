@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import demo from './demo.html';
 
 @Component({
-  selector: 'app-millibars',
-  templateUrl: './millibars.component.html',
+    selector: 'app-millibars',
+    templateUrl: './millibars.component.html',
+    standalone: false
 })
 export class MillibarsComponent {
   /**
