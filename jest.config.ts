@@ -1,5 +1,7 @@
+// spell-checker: words Sonarqube
+import { Config } from "jest";
 
-module.exports = {
+const config: Config = {
   projects: [
     "projects/weather-gauges",
     "projects/weather-gauges-docs"
@@ -25,3 +27,5 @@ module.exports = {
     "lcovonly"
   ]
 };
+
+export default config;
