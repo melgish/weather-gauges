@@ -13,6 +13,7 @@ import { ClockComponent } from './clock/clock.component';
 import { InchesComponent } from './inches/inches.component';
 import { MillibarsComponent } from './millibars/millibars.component';
 import { TemperatureComponent } from './temperature/temperature.component';
+import { MockHighlightPipeModule } from './highlight/mock-highlight.pipe.module';
 
 describe('AppComponent', () => {
   beforeEach(() =>
@@ -30,7 +31,7 @@ describe('AppComponent', () => {
         TemperatureComponent,
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-      imports: [FormsModule, WeatherGaugesModule, AppRoutingModule],
+      imports: [FormsModule, MockHighlightPipeModule, WeatherGaugesModule, AppRoutingModule],
     }).compileComponents()
   );
 

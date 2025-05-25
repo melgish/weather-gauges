@@ -14,7 +14,7 @@ import { ClockComponent } from './clock/clock.component';
 import { InchesComponent } from './inches/inches.component';
 import { MillibarsComponent } from './millibars/millibars.component';
 import { TemperatureComponent } from './temperature/temperature.component';
-import { HighlightPipe } from './highlight/highlight.pipe';
+import { HighlightPipeModule } from './highlight/highlight.pipe.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,6 @@ import { HighlightPipe } from './highlight/highlight.pipe';
     InchesComponent,
     MillibarsComponent,
     TemperatureComponent,
-    HighlightPipe
   ],
   imports: [
     BrowserModule,
@@ -36,9 +35,9 @@ import { HighlightPipe } from './highlight/highlight.pipe';
     AppRoutingModule,
     NgbDropdownModule,
     WeatherGaugesModule,
+    HighlightPipeModule,
   ],
-  providers: [
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

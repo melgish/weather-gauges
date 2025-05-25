@@ -2,9 +2,9 @@ import { Component, Input } from '@angular/core';
 import demo from './demo.html';
 
 @Component({
-    selector: 'app-celsius',
-    templateUrl: './celsius.component.html',
-    standalone: false
+  selector: 'app-celsius',
+  templateUrl: './celsius.component.html',
+  standalone: false
 })
 export class CelsiusComponent {
   /**
