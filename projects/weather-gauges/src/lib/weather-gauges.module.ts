@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CelsiusDialComponent } from './celsius-dial/celsius-dial.component';
-import { FahrenheitDialComponent, FarenheitDialComponent } from './fahrenheit-dial/fahrenheit-dial.component';
+import { FahrenheitDialComponent } from './fahrenheit-dial/fahrenheit-dial.component';
 import { HumidityDialComponent } from './humidity-dial/humidity-dial.component';
 import { WindDialComponent } from './wind-dial/wind-dial.component';
 import { ClockDialComponent } from './clock-dial/clock-dial.component';
@@ -15,7 +15,6 @@ import { TempSqDialComponent } from './temp-sq-dial/temp-sq-dial.component';
     CelsiusDialComponent,
     ClockDialComponent,
     FahrenheitDialComponent,
-    FarenheitDialComponent,
     HumidityDialComponent,
     PressureInDialComponent,
     PressureMbDialComponent,
@@ -27,7 +26,6 @@ import { TempSqDialComponent } from './temp-sq-dial/temp-sq-dial.component';
     CelsiusDialComponent,
     ClockDialComponent,
     FahrenheitDialComponent,
-    FarenheitDialComponent,
     HumidityDialComponent,
     WindDialComponent,
     PressureInDialComponent,

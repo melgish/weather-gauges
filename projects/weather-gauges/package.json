@@ -1,6 +1,6 @@
 {
   "name": "@njfiorello/weather-gauges",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "license": "MIT",
   "description": "Some svg gauges relating to weather.",
   "keywords": [
@@ -14,7 +14,7 @@
     "tslib": "^2.4.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=14.0.0",
-    "@angular/core": ">=14.0.0"
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0"
   }
 }

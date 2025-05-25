@@ -24,10 +24,3 @@ export class FahrenheitDialComponent implements OnChanges {
     }
   }
 }
-
- @Component({
-   imports: [CommonModule],
-   selector: 'wg-farenheit-dial',
-   templateUrl: './fahrenheit-dial.component.html'
- })
- export class FarenheitDialComponent extends FahrenheitDialComponent {}

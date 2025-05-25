@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ## https://melgish.github.io/weather-gauges/
 
-Some svg gauges relating to weather.  Built for Angular 17.
+Some svg gauges relating to weather.  Built with Angular 19.
 
 ![screenshot](https://user-images.githubusercontent.com/12336197/38342888-030520e8-384f-11e8-9501-1d85617a8ed3.png)
 
