@@ -8,7 +8,7 @@ describe('ClockDialComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ClockDialComponent],
+      imports: [ClockDialComponent],
     }).compileComponents()
   );
 

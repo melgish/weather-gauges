@@ -9,7 +9,7 @@ describe('TempSqDialComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [TempSqDialComponent],
+      imports: [TempSqDialComponent],
     }).compileComponents()
   );
 

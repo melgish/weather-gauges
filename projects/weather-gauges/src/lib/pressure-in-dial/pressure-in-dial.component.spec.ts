@@ -12,7 +12,7 @@ describe('PressureInDialComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [PressureInDialComponent],
+      imports: [PressureInDialComponent],
     }).compileComponents()
   );
 

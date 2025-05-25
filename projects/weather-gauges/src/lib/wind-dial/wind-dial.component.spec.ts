@@ -12,7 +12,7 @@ describe('WindDialComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [WindDialComponent],
+      imports: [WindDialComponent],
     }).compileComponents()
   );
 

@@ -13,7 +13,7 @@ describe('CelsiusDialComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [CelsiusDialComponent],
+      imports: [CelsiusDialComponent],
     }).compileComponents()
   );
 

@@ -10,28 +10,29 @@ import { PressureMbDialComponent } from './pressure-mb-dial/pressure-mb-dial.com
 import { TempSqDialComponent } from './temp-sq-dial/temp-sq-dial.component';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [
+  imports: [
+    CommonModule,
     CelsiusDialComponent,
+    ClockDialComponent,
     FahrenheitDialComponent,
     FarenheitDialComponent,
     HumidityDialComponent,
-    WindDialComponent,
-    ClockDialComponent,
     PressureInDialComponent,
     PressureMbDialComponent,
-    TempSqDialComponent
+    TempSqDialComponent,
+    WindDialComponent,
   ],
+  declarations: [],
   exports: [
     CelsiusDialComponent,
+    ClockDialComponent,
     FahrenheitDialComponent,
     FarenheitDialComponent,
     HumidityDialComponent,
     WindDialComponent,
-    ClockDialComponent,
     PressureInDialComponent,
     PressureMbDialComponent,
-    TempSqDialComponent
-  ]
+    TempSqDialComponent,
+  ],
 })
-export class WeatherGaugesModule { }
+export class WeatherGaugesModule {}

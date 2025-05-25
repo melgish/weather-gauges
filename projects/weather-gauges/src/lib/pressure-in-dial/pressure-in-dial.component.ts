@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
-    selector: 'wg-pressure-in-dial',
-    templateUrl: './pressure-in-dial.component.html',
-    standalone: false
+  imports: [CommonModule],
+  selector: 'wg-pressure-in-dial',
+  templateUrl: './pressure-in-dial.component.html',
 })
 export class PressureInDialComponent implements OnChanges {
   @Input() current = 29;
@@ -11,7 +12,7 @@ export class PressureInDialComponent implements OnChanges {
   rotCurrent = 'rotate(0)';
   rotPrevious = 'rotate(0)';
 
-  ngOnChanges(changes: SimpleChanges ) {
+  ngOnChanges(changes: SimpleChanges) {
     if (changes.current) {
       // current: [25, 33]
       //   range = abs(25 - 33) = 8;
@@ -21,11 +22,11 @@ export class PressureInDialComponent implements OnChanges {
       // factor: arc.range / pressure.range = 3;
       // rotation = (t - center) * factor;
       const c = changes.current.currentValue;
-      this.rotCurrent = `rotate(${((c - 29) * 30) || 0})`;
+      this.rotCurrent = `rotate(${(c - 29) * 30 || 0})`;
     }
     if (changes.previous) {
       const p = changes.previous.currentValue;
-      this.rotPrevious = `rotate(${((p - 29) * 30) || 0})`;
+      this.rotPrevious = `rotate(${(p - 29) * 30 || 0})`;
     }
   }
 }
