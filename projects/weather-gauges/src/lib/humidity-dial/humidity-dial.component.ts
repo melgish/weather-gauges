@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
+  imports: [CommonModule],
   selector: 'wg-humidity-dial',
-  templateUrl: './humidity-dial.component.html'
+  templateUrl: './humidity-dial.component.html',
 })
 export class HumidityDialComponent implements OnChanges {
   @Input() humidity = 50;
@@ -10,7 +12,7 @@ export class HumidityDialComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.humidity) {
-       // humidity: [0, 100]
+      // humidity: [0, 100]
       //   range = abs(0 - 100) = 100;
       //   center = (range / 2) + min = 50;
       // arc: [-100, 100]
@@ -18,7 +20,7 @@ export class HumidityDialComponent implements OnChanges {
       // factor: arc.range / temperature.range = 2;
       // rotation = (h - center) * factor;
       const h = changes.humidity.currentValue;
-      this.rotate = `rotate(${((h - 50) * 2) || 0})`;
+      this.rotate = `rotate(${(h - 50) * 2 || 0})`;
     }
   }
 }

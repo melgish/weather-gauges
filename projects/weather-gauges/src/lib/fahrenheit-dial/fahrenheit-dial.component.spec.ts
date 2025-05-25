@@ -11,7 +11,7 @@ describe('FahrenheitDialComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [FahrenheitDialComponent],
+      imports: [FahrenheitDialComponent],
     }).compileComponents()
   );
 

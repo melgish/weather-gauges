@@ -1,6 +1,8 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
+  imports: [CommonModule],
   selector: 'wg-pressure-mb-dial',
   templateUrl: './pressure-mb-dial.component.html',
 })
@@ -20,11 +22,11 @@ export class PressureMbDialComponent implements OnChanges {
       // factor: arc.range / pressure.range = 250 / 200 = 1.25;
       // rotation = (t - center) * factor;
       const c = changes.current.currentValue;
-      this.rotCurrent = `rotate(${((c - 980) * 1.25) || 0})`;
+      this.rotCurrent = `rotate(${(c - 980) * 1.25 || 0})`;
     }
     if (changes.previous) {
       const p = changes.previous.currentValue;
-      this.rotPrevious = `rotate(${((p - 980) * 1.25) || 0})`;
+      this.rotPrevious = `rotate(${(p - 980) * 1.25 || 0})`;
     }
   }
 }

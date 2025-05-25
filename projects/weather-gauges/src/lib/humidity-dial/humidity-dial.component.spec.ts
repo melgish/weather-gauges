@@ -11,7 +11,7 @@ describe('HumidityDialComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [HumidityDialComponent],
+      imports: [HumidityDialComponent],
     }).compileComponents()
   );
 

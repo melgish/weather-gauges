@@ -1,8 +1,11 @@
+/* eslint-disable @angular-eslint/prefer-standalone */
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+
+  standalone: false,
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
   title = '@njfiorello/weather-gauges';

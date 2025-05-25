@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
+  imports: [CommonModule],
   selector: 'wg-fahrenheit-dial',
-  templateUrl: './fahrenheit-dial.component.html',
+  templateUrl: './fahrenheit-dial.component.html'
 })
 export class FahrenheitDialComponent implements OnChanges {
   @Input() temperature = 60;
@@ -22,9 +24,3 @@ export class FahrenheitDialComponent implements OnChanges {
     }
   }
 }
-
- @Component({
-  selector: 'wg-farenheit-dial',
-  templateUrl: './fahrenheit-dial.component.html',
-})
-export class FarenheitDialComponent extends FahrenheitDialComponent {}

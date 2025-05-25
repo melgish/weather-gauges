@@ -1,9 +1,19 @@
 import { Component, Input } from '@angular/core';
 import demo from './demo.html';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HighlightPipe } from '../highlight/highlight.pipe';
+import { TempSqDialComponent } from '@njfiorello/weather-gauges';
 
 @Component({
-  selector: 'app-temperature',
-  templateUrl: './temperature.component.html',
+  imports: [
+    CommonModule,
+    FormsModule,
+    HighlightPipe,
+    TempSqDialComponent
+  ],
+    selector: 'app-temperature',
+    templateUrl: './temperature.component.html',
 })
 export class TemperatureComponent {
   /**

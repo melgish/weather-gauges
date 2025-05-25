@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CelsiusDialComponent } from './celsius-dial/celsius-dial.component';
-import { FahrenheitDialComponent, FarenheitDialComponent } from './fahrenheit-dial/fahrenheit-dial.component';
+import { FahrenheitDialComponent } from './fahrenheit-dial/fahrenheit-dial.component';
 import { HumidityDialComponent } from './humidity-dial/humidity-dial.component';
 import { WindDialComponent } from './wind-dial/wind-dial.component';
 import { ClockDialComponent } from './clock-dial/clock-dial.component';
@@ -10,28 +10,27 @@ import { PressureMbDialComponent } from './pressure-mb-dial/pressure-mb-dial.com
 import { TempSqDialComponent } from './temp-sq-dial/temp-sq-dial.component';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [
+  imports: [
+    CommonModule,
     CelsiusDialComponent,
-    FahrenheitDialComponent,
-    FarenheitDialComponent,
-    HumidityDialComponent,
-    WindDialComponent,
     ClockDialComponent,
+    FahrenheitDialComponent,
+    HumidityDialComponent,
     PressureInDialComponent,
     PressureMbDialComponent,
-    TempSqDialComponent
+    TempSqDialComponent,
+    WindDialComponent,
   ],
+  declarations: [],
   exports: [
     CelsiusDialComponent,
+    ClockDialComponent,
     FahrenheitDialComponent,
-    FarenheitDialComponent,
     HumidityDialComponent,
     WindDialComponent,
-    ClockDialComponent,
     PressureInDialComponent,
     PressureMbDialComponent,
-    TempSqDialComponent
-  ]
+    TempSqDialComponent,
+  ],
 })
-export class WeatherGaugesModule { }
+export class WeatherGaugesModule {}

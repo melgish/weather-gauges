@@ -1,8 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { WeatherGaugesModule } from '@njfiorello/weather-gauges';
 import { CelsiusComponent } from './celsius.component';
-import { MockHighlightPipe } from '../highlight/highlight.pipe.mock';
 
 describe('CelsiusComponent', () => {
   let component: CelsiusComponent;
@@ -10,8 +7,7 @@ describe('CelsiusComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [CelsiusComponent, MockHighlightPipe],
-      imports: [FormsModule, WeatherGaugesModule],
+      imports: [CelsiusComponent],
     }).compileComponents()
   );
 

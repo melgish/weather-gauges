@@ -1,6 +1,8 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
+  imports: [CommonModule],
   selector: 'wg-clock-dial',
   templateUrl: './clock-dial.component.html'
 })

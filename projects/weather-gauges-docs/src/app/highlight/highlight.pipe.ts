@@ -18,7 +18,6 @@ const options = {
 
 @Pipe({
   name: 'highlight',
-  standalone: false,
   pure: true
 })
 export class HighlightPipe implements PipeTransform {
