@@ -2,7 +2,8 @@
   "extends": "../../.eslintrc.json",
   "ignorePatterns": [
     "!**/*",
-    "src/environments/**/*.*"
+    "src/environments/**/*.*",
+    "jest.config.ts"
   ],
   "overrides": [
     {
